@@ -4,15 +4,15 @@ import Image from "next/image";
 
 const aboutImages = [
   {
-    src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=82",
+    src: "/images/client-supplied/service-global-distribution.jpg",
     alt: "Wholesale partners reviewing international supply plans",
   },
   {
-    src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=82",
+    src: "/images/client-supplied/service-logistics-management.jpg",
     alt: "Global logistics containers ready for shipment",
   },
   {
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=82",
+    src: "/images/client-supplied/service-sourcing-development.jpg",
     alt: "Business team discussing premium distribution",
   },
 ];
