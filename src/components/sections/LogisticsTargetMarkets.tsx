@@ -111,7 +111,7 @@ export function LogisticsTargetMarkets({ compact = false }: { compact?: boolean 
                 className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:border-[#00A884] flex flex-col justify-between h-[360px]"
               >
                 {/* Image Frame */}
-                <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 z-0 bg-slate-100">
                   <Image
                     src={mode.image}
                     alt={mode.title.en}
@@ -119,25 +119,25 @@ export function LogisticsTargetMarkets({ compact = false }: { compact?: boolean 
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105 filter saturate-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071321] via-[#071321]/60 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071321]/90 via-[#071321]/25 via-45% to-transparent" />
                 </div>
 
                 {/* Top Badge */}
                 <div className="relative z-10 p-5 flex justify-between items-center">
-                  <div className="h-10 w-10 rounded-full bg-white/95 backdrop-blur-md flex items-center justify-center text-[#00A884] shadow-sm">
+                  <div className="h-10 w-10 rounded-full bg-white/95 backdrop-blur-md flex items-center justify-center text-[#00A884] shadow-md border border-slate-100">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <span className="rounded-full bg-[#071321]/80 backdrop-blur-md px-3 py-1 text-[10px] font-bold text-white uppercase tracking-wider border border-white/10">
+                  <span className="rounded-full bg-slate-900/75 backdrop-blur-md px-3 py-1 text-[10px] font-bold text-white uppercase tracking-wider border border-white/20 shadow-xs">
                     Mode 0{idx + 1}
                   </span>
                 </div>
 
                 {/* Content Area */}
-                <div className="relative z-10 p-6 space-y-2 text-white">
-                  <h3 className="text-xl font-semibold text-white group-hover:text-[#00A884] transition">
+                <div className="relative z-10 p-6 space-y-1.5 text-white">
+                  <h3 className="text-xl font-bold text-white drop-shadow-md group-hover:text-[#00A884] transition">
                     {t(mode.title.en, mode.title.es)}
                   </h3>
-                  <p className="text-xs text-white/80 leading-relaxed">
+                  <p className="text-xs font-medium text-slate-100/90 leading-relaxed drop-shadow-xs">
                     {t(mode.desc.en, mode.desc.es)}
                   </p>
                 </div>
