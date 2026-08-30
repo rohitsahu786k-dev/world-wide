@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: "Your trusted partner in luxury perfumery, cosmetics, skincare, fine wines & spirits, and lifestyle products. Based in Valencia, Spain with global distribution.",
     url: site.url,
     siteName: site.name,
-    images: [{ url: "/images/curated/hero-luxury-wholesale.webp", width: 1200, height: 630, alt: "Worldwide Supply 28 SL international luxury wholesale" }],
+    images: [{ url: "/images/client-supplied/hero-duty-free-retail.jpg", width: 1200, height: 630, alt: "Worldwide Supply 28 SL international luxury wholesale" }],
     type: "website",
   },
   icons: {

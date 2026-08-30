@@ -27,25 +27,25 @@ export function LogisticsTargetMarkets({ compact = false }: { compact?: boolean 
     {
       title: { en: "Road Freight", es: "Transporte por Carretera" },
       desc: { en: "Pan-European express & temperature-controlled trucking fleets.", es: "Flotas de camiones con control de temperatura y servicio exprés paneuropeo." },
-      image: "/images/logistics/road-freight.jpg",
+      image: "/images/client-supplied/logistics-road-freight.jpg",
       icon: Truck
     },
     {
       title: { en: "Sea Freight", es: "Transporte Marítimo" },
       desc: { en: "FCL & LCL containerized global shipping lines.", es: "Líneas de transporte marítimo global en contenedores FCL y LCL." },
-      image: "/images/logistics/sea-freight.jpg",
+      image: "/images/client-supplied/logistics-sea-freight.jpg",
       icon: Ship
     },
     {
       title: { en: "Air Freight", es: "Transporte Aéreo" },
       desc: { en: "Priority express air cargo for high-value luxury goods.", es: "Carga aérea exprés prioritaria para mercancías de lujo de gran valor." },
-      image: "/images/logistics/air-freight.jpg",
+      image: "/images/client-supplied/logistics-air-freight.jpg",
       icon: Plane
     },
     {
       title: { en: "Global Network", es: "Red Global" },
       desc: { en: "Seamless cross-border customs & bonded warehouse distribution.", es: "Aduanas transfronterizas fluidas y distribución en almacén franco." },
-      image: "/images/logistics/global-network.jpg",
+      image: "/images/client-supplied/logistics-global-network.jpg",
       icon: Globe
     }
   ];

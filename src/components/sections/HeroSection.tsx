@@ -16,7 +16,7 @@ export function HeroSection() {
         {/* Desktop Background Image (Hidden on Mobile) */}
         <div className="absolute inset-0 z-0 hidden sm:block">
           <Image
-            src="/images/curated/hero-luxury-wholesale.webp"
+            src="/images/client-supplied/hero-duty-free-retail.jpg"
             alt="Luxury Products by Futuristic Waterfront Architecture Valencia Desktop"
             fill
             priority
@@ -27,7 +27,7 @@ export function HeroSection() {
         {/* Mobile Background Image (Visible ONLY on Mobile Screens) */}
         <div className="absolute inset-0 z-0 block sm:hidden">
           <Image
-            src="/images/curated/hero-mobile-luxury-wholesale.webp"
+            src="/images/client-supplied/hero-mobile-sauvage-fragrance.jpg"
             alt="Luxury Products Valencia Mobile Banner"
             fill
             priority
