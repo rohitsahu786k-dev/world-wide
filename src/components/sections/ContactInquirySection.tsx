@@ -7,6 +7,7 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
 
 export function ContactInquirySection({ compact = false }: { compact?: boolean }) {
   const { t } = useLanguage();
+  const whatsappUrl = `https://wa.me/${siteData.company.contact.whatsapp.replace(/[^0-9]/g, "")}`;
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -64,9 +65,9 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-[#00A884] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-white block mb-0.5">{t("Phone / WhatsApp (24/7)", "Teléfono / WhatsApp (24/7)")}</span>
-                    <a href={`tel:${siteData.company.contact.phone}`} className="hover:text-[#00A884]">
-                      {siteData.company.contact.phone}
+                    <span className="font-bold text-white block mb-0.5">{t("WhatsApp (24/7)", "WhatsApp (24/7)")}</span>
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884]">
+                      {siteData.company.contact.whatsapp}
                     </a>
                   </div>
                 </li>

@@ -9,8 +9,8 @@ const highlights = [
     icon: Globe2,
     title: { en: "Global Reach", es: "Alcance Global" },
     desc: {
-      en: "Serving wholesale, luxury retail, and travel retail clients across Europe, Asia, the GCC, Africa, and North America.",
-      es: "Atendiendo a clientes mayoristas, retail de lujo y travel retail en Europa, Asia, GCC, Africa y Norteamerica."
+      en: "Serving wholesale, luxury retail, and travel retail clients across Europe, Asia, the GCC, Africa, North America, South America, and Australia.",
+      es: "Atendiendo a clientes mayoristas, retail de lujo y travel retail en Europa, Asia, GCC, Africa, Norteamerica, Sudamerica y Australia."
     }
   },
   {

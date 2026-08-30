@@ -38,7 +38,7 @@ export const siteData = {
     },
     contact: {
       phone: "+34 614 85 05 70",
-      whatsapp: "+34 614 85 05 70",
+      whatsapp: "+34 614 655 587",
       whatsappText: "Available 24/7",
       email: "info@worldwidesupply28.com",
       website: "www.worldwidesupply28.com",
@@ -140,7 +140,7 @@ export const siteData = {
         en: "High-end luxury perfumes from premier global fashion houses and prestige beauty groups.",
         es: "Perfumes de lujo de alta gama de las principales casas de moda y grupos de belleza prestige."
       },
-      image: "/images/card-images/premium-luxury-perfumes-fragrances-product-card.webp",
+      image: "/images/client-supplied/category-perfumes-fragrances.jpg",
       badge: { en: "Prestige Brands", es: "Marcas Prestige" }
     },
     {
@@ -150,7 +150,7 @@ export const siteData = {
         en: "Exclusive, artisanal perfumery collections crafted for discerning collectors and specialized boutiques.",
         es: "Colecciones de perfumería artesanal y exclusiva diseñadas para coleccionistas exigentes y boutiques especializadas."
       },
-      image: "/images/card-images/artisanal-niche-fragrances-luxury-product-card.webp",
+      image: "/images/client-supplied/category-niche-fragrances.jpg",
       badge: { en: "Artisanal & Niche", es: "Artesanal y Nicho" }
     },
     {
@@ -160,7 +160,7 @@ export const siteData = {
         en: "Premium skincare formulations, luxury color cosmetics, and advanced beauty treatments.",
         es: "Formulaciones avanzadas para el cuidado de la piel, cosmética de color de lujo y tratamientos de belleza."
       },
-      image: "/images/card-images/luxury-cosmetics-skincare-premium-product-card.webp",
+      image: "/images/client-supplied/category-cosmetics-skincare.jpg",
       badge: { en: "Skincare & Beauty", es: "Belleza y Cuidado" }
     },
     {
@@ -170,7 +170,7 @@ export const siteData = {
         en: "Curated selections of fine champagne, prestige wines, and rare spirits for duty-free and luxury retail.",
         es: "Selecciones de fino champagne, vinos prestige y licores exclusivos para duty-free y minoristas de lujo."
       },
-      image: "/images/card-images/premium-wines-spirits-champagne-product-card.webp",
+      image: "/images/client-supplied/category-wines-spirits.jpg",
       badge: { en: "Fine Beverages", es: "Bebidas Finas" }
     },
     {
@@ -180,7 +180,7 @@ export const siteData = {
         en: "Tailored travel retail exclusives, fragrance miniatures, and multi-piece gift box sets.",
         es: "Exclusivos de travel retail a medida, miniaturas de fragancias y juegos de regalos en estuches de lujo."
       },
-      image: "/images/card-images/premium-skincare-wellness-luxury-product-card.webp",
+      image: "/images/client-supplied/category-travel-sets.jpg",
       badge: { en: "Travel Retail Exclusives", es: "Exclusivos Travel Retail" }
     },
     {
@@ -190,7 +190,7 @@ export const siteData = {
         en: "Fine silk scarves, luxury leather goods accessories, and premium textile creations.",
         es: "Pañuelos de seda fina, accesorios de marroquinería de lujo y creaciones textiles de primera calidad."
       },
-      image: "/images/card-images/luxury-fashion-textiles-accessories-product-card.webp",
+      image: "/images/client-supplied/category-fashion-textiles.jpg",
       badge: { en: "Lifestyle & Apparel", es: "Estilo de Vida y Moda" }
     },
     {
@@ -200,7 +200,7 @@ export const siteData = {
         en: "Elegant crafted jewelry pieces, luxury watches, and high-end statement accessories.",
         es: "Piezas de joyería elegantemente diseñadas, relojes de lujo y accesorios de alta gama."
       },
-      image: "/images/card-images/fine-jewellery-timepieces-luxury-product-card.webp",
+      image: "/images/client-supplied/category-jewelry-timepieces.jpg",
       badge: { en: "Luxury Accessories", es: "Accesorios de Lujo" }
     },
     {
@@ -210,7 +210,7 @@ export const siteData = {
         en: "Curated lifestyle accents, designer eyewear accessories, and travel companion items.",
         es: "Detalles para el estilo de vida, accesorios de diseño y artículos de transporte y viaje."
       },
-      image: "/images/card-images/luxury-lifestyle-accessories-beauty-product-card.webp",
+      image: "/images/client-supplied/category-accessories.jpg",
       badge: { en: "Lifestyle Accents", es: "Accesorios de Estilo" }
     }
   ],
@@ -277,7 +277,7 @@ export const siteData = {
       { name: { en: "Air Freight", es: "Carga Aérea" }, icon: "Plane", desc: { en: "Express priority air shipments worldwide", es: "Envíos aéreos expresos prioritarios a todo el mundo" } },
       { name: { en: "Global Network", es: "Red Global" }, icon: "Network", desc: { en: "Seamless hub distribution across continents", es: "Distribución fluida a través de centros en todos los continentes" } }
     ],
-    targetMarkets: ["Europe", "Middle East", "North America", "Asia", "Africa"]
+    targetMarkets: ["Europe", "Middle East", "North America", "South America", "Asia", "Africa", "Australia"]
   },
 
   whyChooseUs: [

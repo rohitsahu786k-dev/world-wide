@@ -10,10 +10,10 @@ export function ServicesSection({ compact = false }: { compact?: boolean }) {
   const { t } = useLanguage();
 
   const serviceImages = [
-    "/images/services/global-distribution.jpg",
-    "/images/services/logistics-management.jpg",
-    "/images/services/brand-entry.jpg",
-    "/images/services/sourcing-development.jpg"
+    "/images/client-supplied/service-global-distribution.jpg",
+    "/images/client-supplied/service-logistics-management.jpg",
+    "/images/client-supplied/service-brand-entry.jpg",
+    "/images/client-supplied/service-sourcing-development.jpg"
   ];
 
   return (

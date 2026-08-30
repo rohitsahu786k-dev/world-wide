@@ -86,7 +86,7 @@ export function WhyChooseUs({ compact = false }: { compact?: boolean }) {
 
           <div className="relative min-h-[340px] overflow-hidden rounded-[8px] border border-slate-200 bg-[#071321] shadow-sm lg:col-span-5">
             <Image
-              src="/images/why-us-luxury.jpg"
+              src="/images/client-supplied/why-us-luxury.jpg"
               alt="Worldwide Supply 28 SL wholesale and logistics operations"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"

@@ -7,18 +7,22 @@ const valencia = { lat: 39.4699, lng: -0.3763, label: "Valencia, Spain" };
 const distributionRoutes = [
   { start: valencia, end: { lat: 50.1109, lng: 8.6821, label: "Europe" } },
   { start: valencia, end: { lat: 25.2048, lng: 55.2708, label: "GCC Markets" } },
+  { start: valencia, end: { lat: 40.7128, lng: -74.006, label: "North America" } },
+  { start: valencia, end: { lat: -23.5505, lng: -46.6333, label: "South America" } },
+  { start: valencia, end: { lat: 1.3521, lng: 103.8198, label: "Asia" } },
   { start: valencia, end: { lat: 31.7917, lng: -7.0926, label: "North Africa" } },
   { start: valencia, end: { lat: 9.082, lng: 8.6753, label: "West Africa" } },
   { start: valencia, end: { lat: -1.2921, lng: 36.8219, label: "East Africa" } },
   { start: valencia, end: { lat: -30.5595, lng: 22.9375, label: "Southern Africa" } },
+  { start: valencia, end: { lat: -33.8688, lng: 151.2093, label: "Australia" } },
 ];
 
-const markets = ["Spain HQ", "Europe", "GCC Markets", "North Africa", "West Africa", "East Africa", "Southern Africa"];
+const markets = ["Spain HQ", "Europe", "GCC Markets", "North America", "South America", "Asia", "Africa", "Australia"];
 
 const distributionPoints = [
   { label: "Base", value: "Valencia, Spain", icon: MapPin },
-  { label: "Reach", value: "Europe, GCC & Africa", icon: Ship },
-  { label: "Focus", value: "Africa expansion", icon: UsersRound },
+  { label: "Reach", value: "Europe, GCC, Americas, Asia, Africa & Australia", icon: Ship },
+  { label: "Focus", value: "multi-continent expansion", icon: UsersRound },
 ];
 
 const capabilities = ["Sourcing review", "Wholesale planning", "Logistics coordination", "Partner support"];
@@ -36,7 +40,7 @@ export function GlobalNetwork() {
           Worldwide Supply 28 supports retailers, duty-free operators, distributors, and wholesalers from a Valencia base.
         </p>
         <p className="mx-auto mt-4 max-w-4xl text-base leading-8 text-[#102033]/64 sm:text-lg">
-          Our distribution conversations focus on reliable sourcing, wholesale planning, logistics coordination, and strategic market expansion across Europe, GCC markets, and African collaborations.
+          Our distribution conversations focus on reliable sourcing, wholesale planning, logistics coordination, and strategic market expansion across Europe, GCC markets, the Americas, Asia, Africa, and Australia.
         </p>
 
         <div className="relative mx-auto mt-8 max-w-6xl sm:mt-10">

@@ -27,25 +27,25 @@ export function LogisticsTargetMarkets({ compact = false }: { compact?: boolean 
     {
       title: { en: "Road Freight", es: "Transporte por Carretera" },
       desc: { en: "Pan-European express & temperature-controlled trucking fleets.", es: "Flotas de camiones con control de temperatura y servicio exprés paneuropeo." },
-      image: "/images/logistics/road-freight.jpg",
+      image: "/images/client-supplied/logistics-road-freight.jpg",
       icon: Truck
     },
     {
       title: { en: "Sea Freight", es: "Transporte Marítimo" },
       desc: { en: "FCL & LCL containerized global shipping lines.", es: "Líneas de transporte marítimo global en contenedores FCL y LCL." },
-      image: "/images/logistics/sea-freight.jpg",
+      image: "/images/client-supplied/logistics-sea-freight.jpg",
       icon: Ship
     },
     {
       title: { en: "Air Freight", es: "Transporte Aéreo" },
       desc: { en: "Priority express air cargo for high-value luxury goods.", es: "Carga aérea exprés prioritaria para mercancías de lujo de gran valor." },
-      image: "/images/logistics/air-freight.jpg",
+      image: "/images/client-supplied/logistics-air-freight.jpg",
       icon: Plane
     },
     {
       title: { en: "Global Network", es: "Red Global" },
       desc: { en: "Seamless cross-border customs & bonded warehouse distribution.", es: "Aduanas transfronterizas fluidas y distribución en almacén franco." },
-      image: "/images/logistics/global-network.jpg",
+      image: "/images/client-supplied/logistics-global-network.jpg",
       icon: Globe
     }
   ];
@@ -66,11 +66,19 @@ export function LogisticsTargetMarkets({ compact = false }: { compact?: boolean 
     },
     {
       start: { lat: 39.4699, lng: -0.3763, label: "Valencia" },
+      end: { lat: -23.5505, lng: -46.6333, label: "South America" }
+    },
+    {
+      start: { lat: 39.4699, lng: -0.3763, label: "Valencia" },
       end: { lat: 1.3521, lng: 103.8198, label: "Asia (Singapore)" }
     },
     {
       start: { lat: 39.4699, lng: -0.3763, label: "Valencia" },
       end: { lat: -1.2921, lng: 36.8219, label: "Africa (Nairobi)" }
+    },
+    {
+      start: { lat: 39.4699, lng: -0.3763, label: "Valencia" },
+      end: { lat: -33.8688, lng: 151.2093, label: "Australia" }
     }
   ];
 
@@ -152,8 +160,8 @@ export function LogisticsTargetMarkets({ compact = false }: { compact?: boolean 
               </h3>
               <p className="text-sm sm:text-base text-[#071321] leading-relaxed">
                 {t(
-                  "Emanating from our trade hub in Valencia, Spain, connecting Europe, Middle East, United States, Asia, and Africa.",
-                  "Desde nuestra sede comercial en Valencia, España, conectando Europa, Oriente Medio, EE. UU., Asia y África."
+                  "Emanating from our trade hub in Valencia, Spain, connecting Europe, Middle East, North America, South America, Asia, Africa, and Australia.",
+                  "Desde nuestra sede comercial en Valencia, España, conectando Europa, Oriente Medio, Norteamérica, Sudamérica, Asia, África y Australia."
                 )}
               </p>
 

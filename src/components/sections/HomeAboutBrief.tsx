@@ -50,7 +50,7 @@ export function HomeAboutBrief() {
             <Globe2 className="mb-4 h-6 w-6 text-[#00A884]" />
             <p className="text-3xl font-semibold text-[#071321]">{siteData.company.highlights.countriesServed}</p>
             <p className="mt-1 text-xs font-bold uppercase tracking-wider text-slate-500">
-              {t("Global markets across Europe, GCC, North America, Asia, and Africa", "Mercados globales en Europa, GCC, Norteamerica, Asia y Africa")}
+              {t("Global markets across Europe, GCC, North America, South America, Asia, Africa, and Australia", "Mercados globales en Europa, GCC, Norteamerica, Sudamerica, Asia, Africa y Australia")}
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
