@@ -140,7 +140,7 @@ export const siteData = {
         en: "High-end luxury perfumes from premier global fashion houses and prestige beauty groups.",
         es: "Perfumes de lujo de alta gama de las principales casas de moda y grupos de belleza prestige."
       },
-      image: "/images/client-supplied/category-perfumes-fragrances.jpg",
+      image: "/images/card-images/premium-luxury-perfumes-fragrances-product-card.webp",
       badge: { en: "Prestige Brands", es: "Marcas Prestige" }
     },
     {
@@ -150,7 +150,7 @@ export const siteData = {
         en: "Exclusive, artisanal perfumery collections crafted for discerning collectors and specialized boutiques.",
         es: "Colecciones de perfumería artesanal y exclusiva diseñadas para coleccionistas exigentes y boutiques especializadas."
       },
-      image: "/images/client-supplied/category-niche-fragrances.jpg",
+      image: "/images/card-images/artisanal-niche-fragrances-luxury-product-card.webp",
       badge: { en: "Artisanal & Niche", es: "Artesanal y Nicho" }
     },
     {
@@ -160,7 +160,7 @@ export const siteData = {
         en: "Premium skincare formulations, luxury color cosmetics, and advanced beauty treatments.",
         es: "Formulaciones avanzadas para el cuidado de la piel, cosmética de color de lujo y tratamientos de belleza."
       },
-      image: "/images/client-supplied/category-cosmetics-skincare.jpg",
+      image: "/images/card-images/luxury-cosmetics-skincare-premium-product-card.webp",
       badge: { en: "Skincare & Beauty", es: "Belleza y Cuidado" }
     },
     {
@@ -170,7 +170,7 @@ export const siteData = {
         en: "Curated selections of fine champagne, prestige wines, and rare spirits for duty-free and luxury retail.",
         es: "Selecciones de fino champagne, vinos prestige y licores exclusivos para duty-free y minoristas de lujo."
       },
-      image: "/images/client-supplied/category-wines-spirits.jpg",
+      image: "/images/card-images/premium-wines-spirits-champagne-product-card.webp",
       badge: { en: "Fine Beverages", es: "Bebidas Finas" }
     },
     {
@@ -180,7 +180,7 @@ export const siteData = {
         en: "Tailored travel retail exclusives, fragrance miniatures, and multi-piece gift box sets.",
         es: "Exclusivos de travel retail a medida, miniaturas de fragancias y juegos de regalos en estuches de lujo."
       },
-      image: "/images/client-supplied/category-travel-sets.jpg",
+      image: "/images/card-images/luxury-travel-sets-duty-free-product-card.webp",
       badge: { en: "Travel Retail Exclusives", es: "Exclusivos Travel Retail" }
     },
     {
@@ -190,7 +190,7 @@ export const siteData = {
         en: "Fine silk scarves, luxury leather goods accessories, and premium textile creations.",
         es: "Pañuelos de seda fina, accesorios de marroquinería de lujo y creaciones textiles de primera calidad."
       },
-      image: "/images/client-supplied/category-fashion-textiles.jpg",
+      image: "/images/card-images/luxury-fashion-textiles-accessories-product-card.webp",
       badge: { en: "Lifestyle & Apparel", es: "Estilo de Vida y Moda" }
     },
     {
@@ -200,7 +200,7 @@ export const siteData = {
         en: "Elegant crafted jewelry pieces, luxury watches, and high-end statement accessories.",
         es: "Piezas de joyería elegantemente diseñadas, relojes de lujo y accesorios de alta gama."
       },
-      image: "/images/client-supplied/category-jewelry-timepieces.jpg",
+      image: "/images/card-images/fine-jewellery-timepieces-luxury-product-card.webp",
       badge: { en: "Luxury Accessories", es: "Accesorios de Lujo" }
     },
     {
@@ -210,7 +210,7 @@ export const siteData = {
         en: "Curated lifestyle accents, designer eyewear accessories, and travel companion items.",
         es: "Detalles para el estilo de vida, accesorios de diseño y artículos de transporte y viaje."
       },
-      image: "/images/client-supplied/category-accessories.jpg",
+      image: "/images/card-images/luxury-lifestyle-accessories-beauty-product-card.webp",
       badge: { en: "Lifestyle Accents", es: "Accesorios de Estilo" }
     }
   ],
