@@ -17,6 +17,7 @@ export default function AboutPage() {
         eyebrow="About Us"
         title="Spain-based partner for luxury wholesale"
         copy="Worldwide Supply 28 SL connects premium categories, trusted retail partners, duty-free channels, distributors, and international supply routes from Valencia."
+        imageSrc="/images/heroes/hero-about.jpg"
       />
       <AboutCompanyProfile />
       <AboutStorySection />

@@ -16,6 +16,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Wholesale, logistics, and market-entry support"
         copy="End-to-end B2B capabilities for global distribution, logistics management, brand introduction, and supplier development."
+        imageSrc="/images/heroes/hero-services.jpg"
       />
       <ServicesSection compact />
       <LogisticsTargetMarkets compact />

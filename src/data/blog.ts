@@ -4,7 +4,7 @@ export const blogPosts = [
     description:
       "How Spain-based sourcing, logistics coordination, and partner qualification can support new distributor and retailer collaborations across Africa.",
     image:
-      "/images/client-supplied/service-global-distribution.jpg",
+      "/images/blog/blog-global-duty-free.jpg",
     href: "/global-distribution",
   },
   {
@@ -12,7 +12,7 @@ export const blogPosts = [
     description:
       "Fragrance, beauty, travel sets, accessories, and premium gifting categories can strengthen duty-free and destination retail assortments.",
     image:
-      "/images/client-supplied/category-travel-sets.jpg",
+      "/images/blog/blog-niche-perfumery.jpg",
     href: "/categories",
   },
   {
@@ -20,7 +20,7 @@ export const blogPosts = [
     description:
       "Why serious wholesale websites should focus on partner qualification, availability conversations, sourcing fit, and long-term relationships.",
     image:
-      "/images/client-supplied/service-brand-entry.jpg",
+      "/images/blog/blog-brand-entry-strategy.jpg",
     href: "/partners",
   },
 ];

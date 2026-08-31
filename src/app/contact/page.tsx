@@ -14,6 +14,7 @@ export default function ContactPage() {
         eyebrow="Contact Us"
         title="Start a qualified wholesale conversation"
         copy="Send your sourcing requirement, distribution proposal, or partnership inquiry to the Worldwide Supply 28 SL team in Valencia."
+        imageSrc="/images/heroes/hero-contact.jpg"
       />
       <ContactInquirySection compact />
     </div>

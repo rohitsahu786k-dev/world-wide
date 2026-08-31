@@ -4,15 +4,15 @@ import Image from "next/image";
 
 const aboutImages = [
   {
-    src: "/images/client-supplied/service-global-distribution.jpg",
+    src: "/images/about/about-intro-luxury.jpg",
     alt: "Wholesale partners reviewing international supply plans",
   },
   {
-    src: "/images/client-supplied/service-logistics-management.jpg",
+    src: "/images/about/about-intro-distribution.jpg",
     alt: "Global logistics containers ready for shipment",
   },
   {
-    src: "/images/client-supplied/service-sourcing-development.jpg",
+    src: "/images/about/about-intro-warehouse.jpg",
     alt: "Business team discussing premium distribution",
   },
 ];

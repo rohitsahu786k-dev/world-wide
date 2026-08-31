@@ -6,44 +6,28 @@ import { services } from "@/data/services";
 
 const serviceVisuals = [
   {
-    image: "/images/client-supplied/service-global-distribution.jpg",
+    image: "/images/services/global-distribution.jpg",
     icon: Search,
   },
   {
-    image: "/images/client-supplied/service-logistics-management.jpg",
+    image: "/images/services/logistics-management.jpg",
     icon: Sparkles,
   },
   {
-    image: "/images/client-supplied/service-brand-entry.jpg",
+    image: "/images/services/brand-entry.jpg",
     icon: Ship,
   },
   {
-    image: "/images/client-supplied/service-sourcing-development.jpg",
+    image: "/images/services/sourcing-development.jpg",
     icon: Package,
   },
   {
-    image: "/images/client-supplied/category-perfumes-fragrances.jpg",
+    image: "/images/services/service-overview-5.jpg",
     icon: Package,
   },
   {
-    image: "/images/client-supplied/category-cosmetics-skincare.jpg",
+    image: "/images/services/service-overview-6.jpg",
     icon: Search,
-  },
-  {
-    image: "/images/client-supplied/category-wines-spirits.jpg",
-    icon: Ship,
-  },
-  {
-    image: "/images/client-supplied/category-jewelry-timepieces.jpg",
-    icon: Package,
-  },
-  {
-    image: "/images/client-supplied/category-accessories.jpg",
-    icon: Ship,
-  },
-  {
-    image: "/images/client-supplied/category-fashion-textiles.jpg",
-    icon: Sparkles,
   },
 ];
 

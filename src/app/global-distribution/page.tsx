@@ -14,7 +14,7 @@ export default function GlobalDistributionPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Global Distribution", path: "/global-distribution" }])) }} />
-      <InternalPageHero eyebrow="Global Distribution" title="Supply chain support from Spain to international markets" copy="From sourcing review to delivery coordination, Worldwide Supply 28 supports partners with a practical, compliance-aware, B2B distribution mindset." />
+      <InternalPageHero eyebrow="Global Distribution" title="Supply chain support from Spain to international markets" copy="From sourcing review to delivery coordination, Worldwide Supply 28 supports partners with a practical, compliance-aware, B2B distribution mindset." imageSrc="/images/heroes/hero-logistics.jpg" />
       <GlobalNetwork />
       <section className="bg-white py-20">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:grid-cols-3 lg:px-8">

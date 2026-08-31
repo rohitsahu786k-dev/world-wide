@@ -4,15 +4,17 @@ export function InternalPageHero({
   eyebrow,
   title,
   copy,
+  imageSrc = "/images/heroes/hero-categories.jpg",
 }: {
   eyebrow: string;
   title: string;
   copy: string;
+  imageSrc?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-[#071321] px-4 pb-12 pt-28 text-center text-white sm:px-6 sm:pb-14 sm:pt-32 lg:px-8">
       <Image
-        src="/images/client-supplied/service-global-distribution.jpg"
+        src={imageSrc}
         alt=""
         fill
         priority
