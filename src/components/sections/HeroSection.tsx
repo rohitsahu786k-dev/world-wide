@@ -16,8 +16,8 @@ export function HeroSection() {
         {/* Desktop Background Image (Hidden on Mobile) */}
         <div className="absolute inset-0 z-0 hidden sm:block">
           <Image
-            src="/images/valencia-hero-waterfront.png"
-            alt="Luxury Products by Futuristic Waterfront Architecture Valencia Desktop"
+            src="/images/hero-luxury-unbranded-banner.jpg"
+            alt="Unbranded Luxury Wholesale Products Hero Banner Desktop"
             fill
             priority
             className="object-cover object-right lg:object-center filter saturate-105"
@@ -27,15 +27,16 @@ export function HeroSection() {
         {/* Mobile Background Image (Visible ONLY on Mobile Screens) */}
         <div className="absolute inset-0 z-0 block sm:hidden">
           <Image
-            src="/images/luxury-commerce-premium-products-valencia-mobile-banner.webp"
-            alt="Luxury Products Valencia Mobile Banner"
+            src="/images/hero-luxury-unbranded-mobile-banner.jpg"
+            alt="Unbranded Luxury Wholesale Products Mobile Banner"
             fill
             priority
-            className="object-cover object-top filter saturate-105"
+            className="object-cover object-center filter saturate-105"
           />
         </div>
 
-        <div className="absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.84)_34%,rgba(255,255,255,0.36)_58%,rgba(255,255,255,0.06)_100%)]" aria-hidden="true" />
+        {/* Subtle Gradient Text Mask for Left Headline Clarity (Right side completely clear) */}
+        <div className="absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(255,255,255,0.85)_0%,rgba(255,255,255,0.45)_35%,rgba(255,255,255,0)_65%)]" aria-hidden="true" />
 
         {/* Hero Content Layer */}
         <div className="relative z-20 mx-auto flex h-full max-w-7xl items-center px-4 py-10 sm:px-6 lg:px-8">
