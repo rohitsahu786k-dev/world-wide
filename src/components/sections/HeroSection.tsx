@@ -6,6 +6,9 @@ import { useLanguage } from "@/context/LanguageContext";
 import { siteData } from "@/data/siteData";
 import { MapPin, ArrowRight } from "lucide-react";
 
+const heroDesktopImage = "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-luxury-products-banner-desktop-01.png";
+const heroMobileImage = "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-luxury-products-banner-mobile-01.png";
+
 export function HeroSection() {
   const { t } = useLanguage();
 
@@ -16,8 +19,8 @@ export function HeroSection() {
         {/* Desktop Background Image (Hidden on Mobile) */}
         <div className="absolute inset-0 z-0 hidden sm:block">
           <Image
-            src="/images/hero-luxury-unbranded-banner.jpg"
-            alt="Unbranded Luxury Wholesale Products Hero Banner Desktop"
+            src={heroDesktopImage}
+            alt="Worldwide Supply 28 SL luxury products banner desktop"
             fill
             priority
             className="object-cover object-right lg:object-center filter saturate-105"
@@ -27,16 +30,16 @@ export function HeroSection() {
         {/* Mobile Background Image (Visible ONLY on Mobile Screens) */}
         <div className="absolute inset-0 z-0 block sm:hidden">
           <Image
-            src="/images/hero-luxury-unbranded-mobile-banner.jpg"
-            alt="Unbranded Luxury Wholesale Products Mobile Banner"
+            src={heroMobileImage}
+            alt="Worldwide Supply 28 SL luxury products banner mobile"
             fill
             priority
             className="object-cover object-center filter saturate-105"
           />
         </div>
 
-        {/* Subtle Gradient Text Mask for Left Headline Clarity (Right side completely clear) */}
-        <div className="absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(255,255,255,0.85)_0%,rgba(255,255,255,0.45)_35%,rgba(255,255,255,0)_65%)]" aria-hidden="true" />
+        {/* Light gradient mask keeps the banner visible while supporting text contrast. */}
+        <div className="absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(255,255,255,0.55)_0%,rgba(255,255,255,0.24)_38%,rgba(255,255,255,0)_68%)] sm:bg-[linear-gradient(90deg,rgba(255,255,255,0.58)_0%,rgba(255,255,255,0.22)_34%,rgba(255,255,255,0)_62%)]" aria-hidden="true" />
 
         {/* Hero Content Layer */}
         <div className="relative z-20 mx-auto flex h-full max-w-7xl items-center px-4 py-10 sm:px-6 lg:px-8">
@@ -48,12 +51,12 @@ export function HeroSection() {
             </div>
 
             {/* Main Headline - High Contrast Bold Typography on Sky */}
-            <h1 className="text-3xl font-semibold tracking-tight text-[#071321] leading-[1.1] sm:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-semibold tracking-tight text-[#071321] leading-[1.1] drop-shadow-[0_2px_12px_rgba(255,255,255,0.95)] sm:text-5xl lg:text-6xl">
               {t(siteData.company.tagline.en, siteData.company.tagline.es)}
             </h1>
 
             {/* Sub-headline */}
-            <p className="max-w-xl text-sm font-semibold leading-relaxed text-slate-700 sm:text-lg">
+            <p className="max-w-xl text-sm font-semibold leading-relaxed text-slate-700 drop-shadow-[0_1px_8px_rgba(255,255,255,0.9)] sm:text-lg">
               {t(siteData.company.subTagline.en, siteData.company.subTagline.es)}
             </p>
 
