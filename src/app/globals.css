@@ -213,12 +213,7 @@ html {
     0 34px 34px -32px rgb(11 34 57 / 0.34);
 }
 
-@media (min-width: 1024px) {
-  .mx-auto.max-w-7xl,
-  .mx-auto.max-w-6xl {
-    max-width: 90% !important;
-  }
-}
+
 
 .animated-title-word {
   opacity: 0;

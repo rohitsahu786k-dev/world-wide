@@ -69,7 +69,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center rounded-full border border-slate-200 bg-slate-50/90 p-1.5 lg:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center rounded-full border border-slate-200 bg-slate-50/90 p-1.5 xl:flex" aria-label="Primary navigation">
           {navLinks.map((item) => (
             <Link
               key={item.href}
@@ -82,7 +82,7 @@ export function Header() {
         </nav>
 
         {/* Right CTA & Language Dropdown */}
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           {/* Language Selector Dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
@@ -140,7 +140,7 @@ export function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
           <button
             onClick={() => setLanguage(language === "en" ? "es" : "en")}
             className="flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-bold text-slate-800"
@@ -160,7 +160,7 @@ export function Header() {
 
       {/* Mobile Navigation Sheet */}
       {open && (
-        <div className="border-t border-slate-200 bg-white px-4 pt-3 pb-6 lg:hidden shadow-lg space-y-4">
+        <div className="border-t border-slate-200 bg-white px-4 pt-3 pb-6 xl:hidden shadow-lg space-y-4">
           <div className="space-y-1">
             {navLinks.map((item) => (
               <Link
