@@ -65,10 +65,15 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-[#00A884] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-white block mb-0.5">{t("WhatsApp (24/7)", "WhatsApp (24/7)")}</span>
-                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884]">
-                      {siteData.company.contact.whatsapp}
+                    <span className="font-bold text-white block mb-0.5">{t("WhatsApp & Mobile (24/7)", "WhatsApp y Móvil (24/7)")}</span>
+                    <a href={`https://wa.me/${siteData.company.contact.whatsapp.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] font-bold block text-sm">
+                      {siteData.company.contact.whatsapp} <span className="text-[10px] text-[#00A884] uppercase font-extrabold ml-1">(Main)</span>
                     </a>
+                    {siteData.company.contact.whatsappSecondary && (
+                      <a href={`https://wa.me/${siteData.company.contact.whatsappSecondary.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-xs text-white/80 block mt-1">
+                        WhatsApp: {siteData.company.contact.whatsappSecondary}
+                      </a>
+                    )}
                   </div>
                 </li>
 

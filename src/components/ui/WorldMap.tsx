@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useMemo } from "react";
-import { motion } from "framer-motion";
 import DottedMap from "dotted-map";
 import Image from "next/image";
 
@@ -87,21 +86,13 @@ export function WorldMap({
           const endPoint = projectPoint(dot.end.lat, dot.end.lng);
           return (
             <g key={`path-group-${i}`}>
-              <motion.path
+              <path
                 d={createCurvedPath(startPoint, endPoint)}
                 fill="none"
                 stroke="url(#trade-path-gradient-light)"
                 strokeWidth="2"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{
-                  duration: 2,
-                  delay: 0.3 * i,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  repeatDelay: 1,
-                  ease: "easeInOut",
-                }}
+                strokeDasharray="6 3"
+                className="opacity-90"
               />
             </g>
           );

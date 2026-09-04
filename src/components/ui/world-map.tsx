@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import DottedMap from "dotted-map";
 import Image from "next/image";
 
@@ -69,26 +68,36 @@ export function WorldMap({ dots = [], lineColor = "#207B68", className = "" }: W
 
           return (
             <g key={`${dot.start.label}-${dot.end.label}-${index}`}>
-              <motion.path
+              <path
                 d={createCurvedPath(startPoint, endPoint)}
                 fill="none"
                 stroke="url(#distribution-path-gradient)"
                 strokeWidth="1.4"
-                initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 1 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 1.1, delay: index * 0.16, ease: "easeOut" }}
+                strokeDasharray="4 2"
+                className="opacity-90"
               />
-              {[dot.start, dot.end].map((point) => {
+              {[dot.start, dot.end].map((point, pIdx) => {
                 const projected = projectPoint(point.lat, point.lng);
 
                 return (
                   <g key={`${point.label}-${projected.x}-${projected.y}`}>
-                    <circle cx={projected.x} cy={projected.y} r="2.2" fill={lineColor} />
-                    <circle cx={projected.x} cy={projected.y} r="2.2" fill={lineColor} opacity="0.45">
-                      <animate attributeName="r" from="2.2" to="9" dur="1.8s" begin={`${index * 0.18}s`} repeatCount="indefinite" />
+                    <circle cx={projected.x} cy={projected.y} r="2.5" fill={lineColor} />
+                    <circle cx={projected.x} cy={projected.y} r="2.5" fill={lineColor} opacity="0.45">
+                      <animate attributeName="r" from="2.5" to="9" dur="1.8s" begin={`${index * 0.18}s`} repeatCount="indefinite" />
                       <animate attributeName="opacity" from="0.45" to="0" dur="1.8s" begin={`${index * 0.18}s`} repeatCount="indefinite" />
                     </circle>
+                    {point.label && (
+                      <text
+                        x={projected.x}
+                        y={pIdx === 0 ? projected.y - 8 : projected.y + 12}
+                        fill="#071321"
+                        fontSize="8"
+                        fontWeight="bold"
+                        textAnchor="middle"
+                      >
+                        {point.label}
+                      </text>
+                    )}
                   </g>
                 );
               })}

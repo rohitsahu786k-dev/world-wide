@@ -90,9 +90,9 @@ export function WhyChooseUs({ compact = false }: { compact?: boolean }) {
               alt="Worldwide Supply 28 SL wholesale and logistics operations"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"
-              className="object-cover opacity-72"
+              className="object-cover opacity-90"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#071321] via-[#071321]/54 to-transparent" aria-hidden="true" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#071321]/80 via-[#071321]/25 to-transparent" aria-hidden="true" />
             <div className="relative z-10 flex h-full min-h-[340px] flex-col justify-between p-6 text-white sm:p-8">
               <div className="flex items-center justify-between gap-3">
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/92 px-3.5 py-1.5 text-xs font-bold text-[#071321]">

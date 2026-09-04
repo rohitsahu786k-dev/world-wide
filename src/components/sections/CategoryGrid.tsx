@@ -57,8 +57,8 @@ export function CategoryGrid({ compact = false }: { compact?: boolean }) {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105 filter saturate-105"
                 />
-                {/* Subtle gradient ONLY at the bottom behind text for legibility */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071321]/90 via-[#071321]/30 via-40% to-transparent" />
+                {/* Subtle light gradient ONLY at the bottom line for text legibility */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071321]/80 via-transparent to-transparent" />
               </div>
 
               {/* Badge Top Header */}

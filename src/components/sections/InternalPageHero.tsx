@@ -19,9 +19,9 @@ export function InternalPageHero({
         fill
         priority
         sizes="100vw"
-        className="absolute inset-0 z-0 object-cover opacity-35"
+        className="absolute inset-0 z-0 object-cover opacity-80"
       />
-      <div className="absolute inset-0 z-0 bg-[#071321]/78" aria-hidden="true" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#071321]/60 via-[#071321]/35 to-[#071321]/70" aria-hidden="true" />
       <div
         className="absolute inset-0 z-0"
         style={{

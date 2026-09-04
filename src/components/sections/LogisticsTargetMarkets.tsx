@@ -53,32 +53,32 @@ export function LogisticsTargetMarkets({ compact = false }: { compact?: boolean 
   // Valencia Trade Connection Routes for Interactive World Map
   const valenciaTradeRoutes = [
     {
-      start: { lat: 39.4699, lng: -0.3763, label: "Valencia" }, // HQ Valencia, Spain
+      start: { lat: 39.4699, lng: -0.3763, label: "Valencia (HQ)" },
       end: { lat: 50.1109, lng: 8.6821, label: "Europe" }
     },
     {
-      start: { lat: 39.4699, lng: -0.3763, label: "Valencia" },
-      end: { lat: 25.2048, lng: 55.2708, label: "Middle East (Dubai)" }
+      start: { lat: 39.4699, lng: -0.3763, label: "Valencia (HQ)" },
+      end: { lat: 25.2048, lng: 55.2708, label: "Middle East" }
     },
     {
-      start: { lat: 39.4699, lng: -0.3763, label: "Valencia" },
-      end: { lat: 45.4215, lng: -75.6972, label: "North America" }
+      start: { lat: 39.4699, lng: -0.3763, label: "Valencia (HQ)" },
+      end: { lat: 40.7128, lng: -74.006, label: "North America" }
     },
     {
-      start: { lat: 39.4699, lng: -0.3763, label: "Valencia" },
-      end: { lat: -23.5505, lng: -46.6333, label: "South America" }
+      start: { lat: 39.4699, lng: -0.3763, label: "Valencia (HQ)" },
+      end: { lat: -14.235, lng: -51.9253, label: "South America" }
     },
     {
-      start: { lat: 39.4699, lng: -0.3763, label: "Valencia" },
-      end: { lat: 1.3521, lng: 103.8198, label: "Asia (Singapore)" }
+      start: { lat: 39.4699, lng: -0.3763, label: "Valencia (HQ)" },
+      end: { lat: 34.0479, lng: 100.6197, label: "Asia" }
     },
     {
-      start: { lat: 39.4699, lng: -0.3763, label: "Valencia" },
-      end: { lat: -1.2921, lng: 36.8219, label: "Africa (Nairobi)" }
+      start: { lat: 39.4699, lng: -0.3763, label: "Valencia (HQ)" },
+      end: { lat: 9.082, lng: 8.6753, label: "Africa" }
     },
     {
-      start: { lat: 39.4699, lng: -0.3763, label: "Valencia" },
-      end: { lat: -33.8688, lng: 151.2093, label: "Australia" }
+      start: { lat: 39.4699, lng: -0.3763, label: "Valencia (HQ)" },
+      end: { lat: -25.2744, lng: 133.7751, label: "Australia" }
     }
   ];
 
@@ -119,7 +119,7 @@ export function LogisticsTargetMarkets({ compact = false }: { compact?: boolean 
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105 filter saturate-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071321]/90 via-[#071321]/25 via-45% to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071321]/75 via-transparent to-transparent" />
                 </div>
 
                 {/* Top Badge */}
