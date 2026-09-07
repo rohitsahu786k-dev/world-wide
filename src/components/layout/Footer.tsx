@@ -94,7 +94,7 @@ export function Footer() {
                 <Phone className="h-4 w-4 text-[#00A884] shrink-0 mt-0.5" />
                 <div>
                   <a href={`https://wa.me/${siteData.company.contact.whatsapp.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] font-bold block">
-                    {siteData.company.contact.whatsapp} <span className="text-[10px] text-[#00A884] font-semibold">(Main / WhatsApp)</span>
+                    {siteData.company.contact.whatsapp}
                   </a>
                   {siteData.company.contact.whatsappSecondary && (
                     <a href={`https://wa.me/${siteData.company.contact.whatsappSecondary.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-[11px] text-slate-600 block mt-0.5">
