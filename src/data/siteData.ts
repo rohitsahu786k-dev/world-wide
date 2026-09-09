@@ -181,7 +181,7 @@ export const siteData = {
         en: "Tailored travel retail exclusives, fragrance miniatures, and multi-piece gift box sets.",
         es: "Exclusivos de travel retail a medida, miniaturas de fragancias y juegos de regalos en estuches de lujo."
       },
-      image: "/images/categories/travel-sets.jpg",
+      image: "/images/categories/travel-sets-airport-kit.png",
       badge: { en: "Travel Retail Exclusives", es: "Exclusivos Travel Retail" }
     },
     {
