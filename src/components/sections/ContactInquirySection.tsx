@@ -4,10 +4,11 @@ import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { siteData } from "@/data/siteData";
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
+import { useSiteSettings } from "@/context/SiteSettingsContext";
 
 export function ContactInquirySection({ compact = false }: { compact?: boolean }) {
   const { t } = useLanguage();
-  const whatsappUrl = `https://wa.me/${siteData.company.contact.whatsapp.replace(/[^0-9]/g, "")}`;
+  const { settings } = useSiteSettings();
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -17,6 +18,13 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
     phone: "",
     message: ""
   });
+
+  const whatsappNumber = settings.contact.whatsapp || siteData.company.contact.whatsapp;
+  const whatsappSecondaryNumber = settings.contact.whatsapp_secondary || siteData.company.contact.whatsappSecondary;
+  const contactEmail = settings.contact.email || siteData.company.contact.email;
+  const contactAddress = settings.contact.address || siteData.company.location.address;
+  const contactHours = settings.contact.hours || t(siteData.company.contact.hours.en, siteData.company.contact.hours.es);
+  const companyCif = settings.company.cif || siteData.company.cif;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,7 +66,7 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
                   <MapPin className="h-5 w-5 text-[#00A884] shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold text-white block mb-0.5">{t("Address", "Dirección")}</span>
-                    <span>{siteData.company.location.address}</span>
+                    <span>{contactAddress}</span>
                   </div>
                 </li>
 
@@ -66,12 +74,12 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
                   <Phone className="h-5 w-5 text-[#00A884] shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold text-white block mb-0.5">{t("WhatsApp & Mobile (24/7)", "WhatsApp y Móvil (24/7)")}</span>
-                    <a href={`https://wa.me/${siteData.company.contact.whatsapp.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] font-bold block text-sm">
-                      Mobile - {siteData.company.contact.whatsapp}
+                    <a href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] font-bold block text-sm">
+                      Mobile - {whatsappNumber}
                     </a>
-                    {siteData.company.contact.whatsappSecondary && (
-                      <a href={`https://wa.me/${siteData.company.contact.whatsappSecondary.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-xs text-white/80 block mt-1">
-                        Whatsapp - {siteData.company.contact.whatsappSecondary}
+                    {whatsappSecondaryNumber && (
+                      <a href={`https://wa.me/${whatsappSecondaryNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-xs text-white/80 block mt-1">
+                        Whatsapp - {whatsappSecondaryNumber}
                       </a>
                     )}
                   </div>
@@ -81,8 +89,8 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
                   <Mail className="h-5 w-5 text-[#00A884] shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold text-white block mb-0.5">{t("Email", "Correo Electrónico")}</span>
-                    <a href={`mailto:${siteData.company.contact.email}`} className="hover:text-[#00A884]">
-                      {siteData.company.contact.email}
+                    <a href={`mailto:${contactEmail}`} className="hover:text-[#00A884]">
+                      {contactEmail}
                     </a>
                   </div>
                 </li>
@@ -91,14 +99,14 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
                   <Clock className="h-5 w-5 text-[#00A884] shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold text-white block mb-0.5">{t("Business Hours", "Horario Comercial")}</span>
-                    <span>{t(siteData.company.contact.hours.en, siteData.company.contact.hours.es)}</span>
+                    <span>{contactHours}</span>
                   </div>
                 </li>
               </ul>
             </div>
 
             <div className="pt-6 border-t border-white/10 text-[11px] text-white/50 space-y-1">
-              <p>Registered Company in Spain – Tax ID (CIF): <span className="text-white font-semibold">{siteData.company.cif}</span></p>
+              <p>Registered Company in Spain – Tax ID (CIF): <span className="text-white font-semibold">{companyCif}</span></p>
             </div>
           </div>
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getWpMedia } from "@/lib/wp-media";
 
 export function InternalPageHero({
   eyebrow,
@@ -14,7 +15,7 @@ export function InternalPageHero({
   return (
     <section className="relative overflow-hidden bg-[#071321] px-4 pb-12 pt-28 text-center text-white sm:px-6 sm:pb-14 sm:pt-32 lg:px-8">
       <Image
-        src={imageSrc}
+        src={getWpMedia(imageSrc)}
         alt=""
         fill
         priority

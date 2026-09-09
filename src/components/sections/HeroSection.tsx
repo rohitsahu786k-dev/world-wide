@@ -5,12 +5,18 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { siteData } from "@/data/siteData";
 import { MapPin, ArrowRight } from "lucide-react";
+import { getWpMedia } from "@/lib/wp-media";
+import { useSiteSettings } from "@/context/SiteSettingsContext";
 
-const heroDesktopImage = "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-premium-lifestyle-banner-desktop-02.png";
-const heroMobileImage = "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-premium-collection-banner-mobile-02.png";
+const heroDesktopDefault = getWpMedia("/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-premium-lifestyle-banner-desktop-02.png");
+const heroMobileDefault = getWpMedia("/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-premium-collection-banner-mobile-02.png");
 
 export function HeroSection() {
   const { t } = useLanguage();
+  const { settings } = useSiteSettings();
+
+  const heroDesktopImage = settings.hero.desktop_banners[0] || heroDesktopDefault;
+  const heroMobileImage = settings.hero.mobile_banners[0] || heroMobileDefault;
 
   return (
     <div className="relative w-full bg-white pt-20">
@@ -48,20 +54,20 @@ export function HeroSection() {
         {/* Hero Content Layer */}
         <div className="relative z-20 mx-auto flex h-full max-w-7xl items-start px-4 pb-8 pt-7 sm:items-center sm:px-6 sm:py-10 lg:px-8">
           <div className="w-full max-w-md space-y-3 bg-transparent p-0 sm:max-w-lg sm:space-y-5 lg:max-w-2xl">
-            {/* Location Tag */}
+            {/* Location / Badge Tag */}
             <div className="inline-flex items-center gap-1.5 rounded-full border border-slate-300/80 bg-white/95 px-3 py-1 text-[10px] font-bold text-[#00A884] shadow-xs sm:gap-2 sm:px-4 sm:py-1.5 sm:text-xs">
               <MapPin className="h-3 w-3 shrink-0 sm:h-4 sm:w-4" />
-              <span>{t(siteData.company.location.badge.en, siteData.company.location.badge.es)}</span>
+              <span>{settings.hero.badge || t(siteData.company.location.badge.en, siteData.company.location.badge.es)}</span>
             </div>
 
             {/* Main Headline - High Contrast Bold Typography on Sky */}
             <h1 className="max-w-sm text-[26px] font-semibold tracking-tight text-[#071321] leading-[1.04] drop-shadow-[0_2px_8px_rgba(255,255,255,0.9)] sm:max-w-none sm:text-5xl sm:leading-[1.08] lg:text-6xl">
-              {t(siteData.company.tagline.en, siteData.company.tagline.es)}
+              {settings.hero.title || t(siteData.company.tagline.en, siteData.company.tagline.es)}
             </h1>
 
             {/* Sub-headline */}
             <p className="max-w-sm text-xs font-bold leading-5 text-slate-800 drop-shadow-[0_1px_8px_rgba(255,255,255,0.9)] sm:max-w-xl sm:text-lg sm:leading-relaxed">
-              {t(siteData.company.subTagline.en, siteData.company.subTagline.es)}
+              {settings.company.subtagline || t(siteData.company.subTagline.en, siteData.company.subTagline.es)}
             </p>
 
             {/* Action Buttons */}
@@ -92,13 +98,17 @@ export function HeroSection() {
             {/* Stats Items */}
             <div className="grid grid-cols-3 gap-4 border-b border-slate-200 pb-5 lg:col-span-5 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
               <div>
-                <span className="block text-2xl sm:text-3xl font-semibold text-[#00A884]">15+</span>
+                <span className="block text-2xl sm:text-3xl font-semibold text-[#00A884]">
+                  {settings.hero.stat_exp || "15+"}
+                </span>
                 <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider">
                   {t("Years Experience", "Años Experiencia")}
                 </span>
               </div>
               <div>
-                <span className="block text-2xl sm:text-3xl font-semibold text-[#00A884]">50+</span>
+                <span className="block text-2xl sm:text-3xl font-semibold text-[#00A884]">
+                  {settings.hero.stat_countries || "50+"}
+                </span>
                 <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider">
                   {t("Global Markets", "Mercados Globales")}
                 </span>
@@ -106,7 +116,7 @@ export function HeroSection() {
               <div>
                 <span className="block text-2xl sm:text-3xl font-semibold text-[#071321]">CIF</span>
                 <span className="text-[11px] font-bold text-slate-600 uppercase tracking-wider">
-                  {siteData.company.cif}
+                  {settings.company.cif || siteData.company.cif}
                 </span>
               </div>
             </div>

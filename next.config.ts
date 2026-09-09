@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "aquamarine-herring-353942.hostingersite.com",
+      },
     ],
   },
   async headers() {

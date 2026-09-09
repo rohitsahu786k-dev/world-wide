@@ -1,18 +1,19 @@
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
+import { getWpMedia } from "@/lib/wp-media";
 
 const aboutImages = [
   {
-    src: "/images/about/about-intro-luxury.jpg",
+    src: getWpMedia("/images/about/about-intro-luxury.jpg"),
     alt: "Wholesale partners reviewing international supply plans",
   },
   {
-    src: "/images/about/about-intro-distribution.jpg",
+    src: getWpMedia("/images/about/about-intro-distribution.jpg"),
     alt: "Global logistics containers ready for shipment",
   },
   {
-    src: "/images/about/about-intro-warehouse.jpg",
+    src: getWpMedia("/images/about/about-intro-warehouse.jpg"),
     alt: "Business team discussing premium distribution",
   },
 ];

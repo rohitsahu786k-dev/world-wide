@@ -1,3 +1,5 @@
+import { getWpMedia } from "@/lib/wp-media";
+
 export const site = {
   name: "Worldwide Supply 28",
   tagline: "A Legacy of Trust. A World of Opportunities.",
@@ -9,7 +11,7 @@ export const site = {
   city: "Valencia, Spain",
   director: "Sakina Idmouhine",
   directorTitle: "Directora General",
-  logo: "/world-wide-logo.png",
+  logo: getWpMedia("/world-wide-logo.png"),
   description:
     "Worldwide Supply 28 is a Spain-based international wholesale company specializing in luxury goods, travel retail, FMCG products, global sourcing, and premium distribution solutions.",
 };

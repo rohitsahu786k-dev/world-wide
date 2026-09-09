@@ -5,15 +5,16 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { siteData } from "@/data/siteData";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { getWpMedia } from "@/lib/wp-media";
 
 export function ServicesSection({ compact = false }: { compact?: boolean }) {
   const { t } = useLanguage();
 
   const serviceImages = [
-    "/images/services/global-distribution.jpg",
-    "/images/services/logistics-management.jpg",
-    "/images/services/brand-entry.jpg",
-    "/images/services/sourcing-development.jpg"
+    getWpMedia("/images/services/global-distribution.jpg"),
+    getWpMedia("/images/services/logistics-management.jpg"),
+    getWpMedia("/images/services/brand-entry.jpg"),
+    getWpMedia("/images/services/sourcing-development.jpg")
   ];
 
   return (

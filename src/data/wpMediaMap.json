@@ -1,0 +1,512 @@
+{
+  "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-luxury-products-banner-desktop-01.png": {
+    "id": 11,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/worldwide-supply-28-sl-luxury-products-banner-desktop-01.png",
+    "filename": "worldwide-supply-28-sl-luxury-products-banner-desktop-01.png"
+  },
+  "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-premium-lifestyle-banner-desktop-02.png": {
+    "id": 12,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/worldwide-supply-28-sl-premium-lifestyle-banner-desktop-02.png",
+    "filename": "worldwide-supply-28-sl-premium-lifestyle-banner-desktop-02.png"
+  },
+  "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-wholesale-banner-desktop-03.png": {
+    "id": 13,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/worldwide-supply-28-sl-wholesale-banner-desktop-03.png",
+    "filename": "worldwide-supply-28-sl-wholesale-banner-desktop-03.png"
+  },
+  "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-luxury-products-banner-mobile-01.png": {
+    "id": 14,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/worldwide-supply-28-sl-luxury-products-banner-mobile-01.png",
+    "filename": "worldwide-supply-28-sl-luxury-products-banner-mobile-01.png"
+  },
+  "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-premium-collection-banner-mobile-02.png": {
+    "id": 15,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/worldwide-supply-28-sl-premium-collection-banner-mobile-02.png",
+    "filename": "worldwide-supply-28-sl-premium-collection-banner-mobile-02.png"
+  },
+  "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-wholesale-lifestyle-banner-mobile-03.png": {
+    "id": 16,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/worldwide-supply-28-sl-wholesale-lifestyle-banner-mobile-03.png",
+    "filename": "worldwide-supply-28-sl-wholesale-lifestyle-banner-mobile-03.png"
+  },
+  "/favicon.ico": {
+    "id": 17,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/favicon.png",
+    "filename": "favicon.ico"
+  },
+  "/images/about/about-intro-distribution.jpg": {
+    "id": 18,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/about-intro-distribution.jpg",
+    "filename": "about-intro-distribution.jpg"
+  },
+  "/images/about/about-intro-luxury.jpg": {
+    "id": 19,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/about-intro-luxury.jpg",
+    "filename": "about-intro-luxury.jpg"
+  },
+  "/images/about/about-intro-warehouse.jpg": {
+    "id": 20,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/about-intro-warehouse.jpg",
+    "filename": "about-intro-warehouse.jpg"
+  },
+  "/images/blog/blog-brand-entry-strategy.jpg": {
+    "id": 21,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/blog-brand-entry-strategy.jpg",
+    "filename": "blog-brand-entry-strategy.jpg"
+  },
+  "/images/blog/blog-global-duty-free.jpg": {
+    "id": 22,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/blog-global-duty-free.jpg",
+    "filename": "blog-global-duty-free.jpg"
+  },
+  "/images/blog/blog-niche-perfumery.jpg": {
+    "id": 23,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/blog-niche-perfumery.jpg",
+    "filename": "blog-niche-perfumery.jpg"
+  },
+  "/images/card-images/accessories-designer-eyewear.jpg": {
+    "id": 24,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/accessories-designer-eyewear.jpg",
+    "filename": "accessories-designer-eyewear.jpg"
+  },
+  "/images/card-images/accessories-travel-companion.jpg": {
+    "id": 25,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/accessories-travel-companion.jpg",
+    "filename": "accessories-travel-companion.jpg"
+  },
+  "/images/card-images/artisanal-niche-fragrances-luxury-product-card.webp": {
+    "id": 26,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/artisanal-niche-fragrances-luxury-product-card.webp",
+    "filename": "artisanal-niche-fragrances-luxury-product-card.webp"
+  },
+  "/images/card-images/cosmetics-serum-dropper.jpg": {
+    "id": 27,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/cosmetics-serum-dropper.jpg",
+    "filename": "cosmetics-serum-dropper.jpg"
+  },
+  "/images/card-images/cosmetics-velvet-palette.jpg": {
+    "id": 28,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/cosmetics-velvet-palette.jpg",
+    "filename": "cosmetics-velvet-palette.jpg"
+  },
+  "/images/card-images/fashion-couture-silk.jpg": {
+    "id": 29,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/fashion-couture-silk.jpg",
+    "filename": "fashion-couture-silk.jpg"
+  },
+  "/images/card-images/fashion-leather-tote.jpg": {
+    "id": 30,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/fashion-leather-tote.jpg",
+    "filename": "fashion-leather-tote.jpg"
+  },
+  "/images/card-images/fashion-silk-scarf.jpg": {
+    "id": 31,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/fashion-silk-scarf.jpg",
+    "filename": "fashion-silk-scarf.jpg"
+  },
+  "/images/card-images/fine-jewellery-timepieces-luxury-product-card.webp": {
+    "id": 32,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/fine-jewellery-timepieces-luxury-product-card.webp",
+    "filename": "fine-jewellery-timepieces-luxury-product-card.webp"
+  },
+  "/images/card-images/jewelry-diamond-solitaire.jpg": {
+    "id": 33,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/jewelry-diamond-solitaire.jpg",
+    "filename": "jewelry-diamond-solitaire.jpg"
+  },
+  "/images/card-images/jewelry-gemstone-pendant.jpg": {
+    "id": 34,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/jewelry-gemstone-pendant.jpg",
+    "filename": "jewelry-gemstone-pendant.jpg"
+  },
+  "/images/card-images/jewelry-gold-chronograph.jpg": {
+    "id": 35,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/jewelry-gold-chronograph.jpg",
+    "filename": "jewelry-gold-chronograph.jpg"
+  },
+  "/images/card-images/luxury-cosmetics-skincare-premium-product-card.webp": {
+    "id": 36,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/luxury-cosmetics-skincare-premium-product-card.webp",
+    "filename": "luxury-cosmetics-skincare-premium-product-card.webp"
+  },
+  "/images/card-images/luxury-fashion-textiles-accessories-product-card.webp": {
+    "id": 37,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/luxury-fashion-textiles-accessories-product-card.webp",
+    "filename": "luxury-fashion-textiles-accessories-product-card.webp"
+  },
+  "/images/card-images/luxury-lifestyle-accessories-beauty-product-card.webp": {
+    "id": 38,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/luxury-lifestyle-accessories-beauty-product-card.webp",
+    "filename": "luxury-lifestyle-accessories-beauty-product-card.webp"
+  },
+  "/images/card-images/luxury-travel-sets-duty-free-product-card.webp": {
+    "id": 39,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/luxury-travel-sets-duty-free-product-card.webp",
+    "filename": "luxury-travel-sets-duty-free-product-card.webp"
+  },
+  "/images/card-images/niche-atelier-edition.jpg": {
+    "id": 40,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/niche-atelier-edition.jpg",
+    "filename": "niche-atelier-edition.jpg"
+  },
+  "/images/card-images/niche-elixir-crystal.jpg": {
+    "id": 41,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/niche-elixir-crystal.jpg",
+    "filename": "niche-elixir-crystal.jpg"
+  },
+  "/images/card-images/perfume-artisanal-sprayer.jpg": {
+    "id": 42,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/perfume-artisanal-sprayer.jpg",
+    "filename": "perfume-artisanal-sprayer.jpg"
+  },
+  "/images/card-images/perfume-classic-flacon.jpg": {
+    "id": 43,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/perfume-classic-flacon.jpg",
+    "filename": "perfume-classic-flacon.jpg"
+  },
+  "/images/card-images/perfume-luxury-gold.jpg": {
+    "id": 44,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/perfume-luxury-gold.jpg",
+    "filename": "perfume-luxury-gold.jpg"
+  },
+  "/images/card-images/premium-luxury-perfumes-fragrances-product-card.webp": {
+    "id": 45,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/premium-luxury-perfumes-fragrances-product-card.webp",
+    "filename": "premium-luxury-perfumes-fragrances-product-card.webp"
+  },
+  "/images/card-images/premium-skincare-wellness-luxury-product-card.webp": {
+    "id": 46,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/premium-skincare-wellness-luxury-product-card.webp",
+    "filename": "premium-skincare-wellness-luxury-product-card.webp"
+  },
+  "/images/card-images/premium-wines-spirits-champagne-product-card.webp": {
+    "id": 47,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/premium-wines-spirits-champagne-product-card.webp",
+    "filename": "premium-wines-spirits-champagne-product-card.webp"
+  },
+  "/images/card-images/skincare-hydration-jar.jpg": {
+    "id": 48,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/skincare-hydration-jar.jpg",
+    "filename": "skincare-hydration-jar.jpg"
+  },
+  "/images/card-images/travel-deluxe-case.jpg": {
+    "id": 49,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/travel-deluxe-case.jpg",
+    "filename": "travel-deluxe-case.jpg"
+  },
+  "/images/card-images/travel-miniature-kit.jpg": {
+    "id": 50,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/travel-miniature-kit.jpg",
+    "filename": "travel-miniature-kit.jpg"
+  },
+  "/images/card-images/wines-champagne-prestige.jpg": {
+    "id": 51,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/wines-champagne-prestige.jpg",
+    "filename": "wines-champagne-prestige.jpg"
+  },
+  "/images/card-images/wines-single-malt.jpg": {
+    "id": 52,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/wines-single-malt.jpg",
+    "filename": "wines-single-malt.jpg"
+  },
+  "/images/categories/accessories.jpg": {
+    "id": 53,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/accessories.jpg",
+    "filename": "accessories.jpg"
+  },
+  "/images/categories/cosmetics-skincare.jpg": {
+    "id": 54,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/cosmetics-skincare.jpg",
+    "filename": "cosmetics-skincare.jpg"
+  },
+  "/images/categories/cosmetics.jpg": {
+    "id": 55,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/cosmetics.jpg",
+    "filename": "cosmetics.jpg"
+  },
+  "/images/categories/fashion-textiles.jpg": {
+    "id": 56,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/fashion-textiles.jpg",
+    "filename": "fashion-textiles.jpg"
+  },
+  "/images/categories/jewelry-timepieces.jpg": {
+    "id": 57,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/jewelry-timepieces.jpg",
+    "filename": "jewelry-timepieces.jpg"
+  },
+  "/images/categories/jewelry.jpg": {
+    "id": 58,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/jewelry.jpg",
+    "filename": "jewelry.jpg"
+  },
+  "/images/categories/niche-fragrances.jpg": {
+    "id": 59,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/niche-fragrances.webp",
+    "filename": "niche-fragrances.jpg"
+  },
+  "/images/categories/niche-perfumes.jpg": {
+    "id": 60,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/niche-perfumes.webp",
+    "filename": "niche-perfumes.jpg"
+  },
+  "/images/categories/perfumes-fragrances.jpg": {
+    "id": 61,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/perfumes-fragrances.jpg",
+    "filename": "perfumes-fragrances.jpg"
+  },
+  "/images/categories/perfumes.jpg": {
+    "id": 62,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/perfumes.jpg",
+    "filename": "perfumes.jpg"
+  },
+  "/images/categories/travel-sets-airport-kit.png": {
+    "id": 63,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/travel-sets-airport-kit.png",
+    "filename": "travel-sets-airport-kit.png"
+  },
+  "/images/categories/travel-sets.jpg": {
+    "id": 64,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/travel-sets.jpg",
+    "filename": "travel-sets.jpg"
+  },
+  "/images/categories/wines-spirits.jpg": {
+    "id": 65,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/wines-spirits.jpg",
+    "filename": "wines-spirits.jpg"
+  },
+  "/images/client-supplied/category-accessories.jpg": {
+    "id": 66,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/category-accessories.jpg",
+    "filename": "category-accessories.jpg"
+  },
+  "/images/client-supplied/category-cosmetics-skincare.jpg": {
+    "id": 67,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/category-cosmetics-skincare.jpg",
+    "filename": "category-cosmetics-skincare.jpg"
+  },
+  "/images/client-supplied/category-fashion-textiles.jpg": {
+    "id": 68,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/category-fashion-textiles.jpg",
+    "filename": "category-fashion-textiles.jpg"
+  },
+  "/images/client-supplied/category-jewelry-timepieces.jpg": {
+    "id": 69,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/category-jewelry-timepieces.jpg",
+    "filename": "category-jewelry-timepieces.jpg"
+  },
+  "/images/client-supplied/category-niche-fragrances.jpg": {
+    "id": 70,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/category-niche-fragrances.jpg",
+    "filename": "category-niche-fragrances.jpg"
+  },
+  "/images/client-supplied/category-perfumes-fragrances.jpg": {
+    "id": 71,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/category-perfumes-fragrances.jpg",
+    "filename": "category-perfumes-fragrances.jpg"
+  },
+  "/images/client-supplied/category-travel-sets.jpg": {
+    "id": 72,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/category-travel-sets.jpg",
+    "filename": "category-travel-sets.jpg"
+  },
+  "/images/client-supplied/category-wines-spirits.jpg": {
+    "id": 73,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/category-wines-spirits.jpg",
+    "filename": "category-wines-spirits.jpg"
+  },
+  "/images/client-supplied/hero-duty-free-retail.jpg": {
+    "id": 74,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/hero-duty-free-retail.jpg",
+    "filename": "hero-duty-free-retail.jpg"
+  },
+  "/images/client-supplied/hero-mobile-sauvage-fragrance.jpg": {
+    "id": 75,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/hero-mobile-sauvage-fragrance.jpg",
+    "filename": "hero-mobile-sauvage-fragrance.jpg"
+  },
+  "/images/client-supplied/logistics-air-freight.jpg": {
+    "id": 76,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/logistics-air-freight.jpg",
+    "filename": "logistics-air-freight.jpg"
+  },
+  "/images/client-supplied/logistics-global-network.jpg": {
+    "id": 77,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/logistics-global-network.jpg",
+    "filename": "logistics-global-network.jpg"
+  },
+  "/images/client-supplied/logistics-road-freight.jpg": {
+    "id": 78,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/logistics-road-freight.jpg",
+    "filename": "logistics-road-freight.jpg"
+  },
+  "/images/client-supplied/logistics-sea-freight.jpg": {
+    "id": 79,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/logistics-sea-freight.jpg",
+    "filename": "logistics-sea-freight.jpg"
+  },
+  "/images/client-supplied/service-brand-entry.jpg": {
+    "id": 80,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/service-brand-entry.jpg",
+    "filename": "service-brand-entry.jpg"
+  },
+  "/images/client-supplied/service-global-distribution.jpg": {
+    "id": 81,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/service-global-distribution.jpg",
+    "filename": "service-global-distribution.jpg"
+  },
+  "/images/client-supplied/service-logistics-management.jpg": {
+    "id": 82,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/service-logistics-management.jpg",
+    "filename": "service-logistics-management.jpg"
+  },
+  "/images/client-supplied/service-sourcing-development.jpg": {
+    "id": 83,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/service-sourcing-development.jpg",
+    "filename": "service-sourcing-development.jpg"
+  },
+  "/images/client-supplied/why-us-luxury.jpg": {
+    "id": 84,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/why-us-luxury.jpg",
+    "filename": "why-us-luxury.jpg"
+  },
+  "/images/hero-luxury-unbranded-banner.jpg": {
+    "id": 85,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/hero-luxury-unbranded-banner.jpg",
+    "filename": "hero-luxury-unbranded-banner.jpg"
+  },
+  "/images/hero-luxury-unbranded-mobile-banner.jpg": {
+    "id": 86,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/hero-luxury-unbranded-mobile-banner.jpg",
+    "filename": "hero-luxury-unbranded-mobile-banner.jpg"
+  },
+  "/images/heroes/hero-about.jpg": {
+    "id": 87,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/hero-about.jpg",
+    "filename": "hero-about.jpg"
+  },
+  "/images/heroes/hero-categories-banner-2.png": {
+    "id": 88,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/hero-categories-banner-2.png",
+    "filename": "hero-categories-banner-2.png"
+  },
+  "/images/heroes/hero-categories.jpg": {
+    "id": 89,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/hero-categories.jpg",
+    "filename": "hero-categories.jpg"
+  },
+  "/images/heroes/hero-contact.jpg": {
+    "id": 90,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/hero-contact.jpg",
+    "filename": "hero-contact.jpg"
+  },
+  "/images/heroes/hero-logistics.jpg": {
+    "id": 91,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/hero-logistics.jpg",
+    "filename": "hero-logistics.jpg"
+  },
+  "/images/heroes/hero-services.jpg": {
+    "id": 92,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/hero-services.jpg",
+    "filename": "hero-services.jpg"
+  },
+  "/images/heroes/hero-why-choose-us-banner-1.png": {
+    "id": 93,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/hero-why-choose-us-banner-1.png",
+    "filename": "hero-why-choose-us-banner-1.png"
+  },
+  "/images/logistics/air-freight.jpg": {
+    "id": 94,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/air-freight.jpg",
+    "filename": "air-freight.jpg"
+  },
+  "/images/logistics/global-network.jpg": {
+    "id": 95,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/global-network.jpg",
+    "filename": "global-network.jpg"
+  },
+  "/images/logistics/road-freight.jpg": {
+    "id": 96,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/road-freight.jpg",
+    "filename": "road-freight.jpg"
+  },
+  "/images/logistics/sea-freight.jpg": {
+    "id": 97,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/sea-freight.jpg",
+    "filename": "sea-freight.jpg"
+  },
+  "/images/luxury-commerce-premium-products-valencia-mobile-banner.webp": {
+    "id": 98,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/luxury-commerce-premium-products-valencia-mobile-banner.webp",
+    "filename": "luxury-commerce-premium-products-valencia-mobile-banner.webp"
+  },
+  "/images/services/brand-entry.jpg": {
+    "id": 99,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/brand-entry.jpg",
+    "filename": "brand-entry.jpg"
+  },
+  "/images/services/global-distribution.jpg": {
+    "id": 100,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/global-distribution.jpg",
+    "filename": "global-distribution.jpg"
+  },
+  "/images/services/logistics-management.jpg": {
+    "id": 101,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/logistics-management.jpg",
+    "filename": "logistics-management.jpg"
+  },
+  "/images/services/service-overview-5.jpg": {
+    "id": 102,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/service-overview-5.jpg",
+    "filename": "service-overview-5.jpg"
+  },
+  "/images/services/service-overview-6.jpg": {
+    "id": 103,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/service-overview-6.jpg",
+    "filename": "service-overview-6.jpg"
+  },
+  "/images/services/sourcing-development.jpg": {
+    "id": 104,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/sourcing-development.jpg",
+    "filename": "sourcing-development.jpg"
+  },
+  "/images/team/sakina-idmouhine.jpg": {
+    "id": 105,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/sakina-idmouhine.jpg",
+    "filename": "sakina-idmouhine.jpg"
+  },
+  "/images/team/siddharth-thakker.jpg": {
+    "id": 106,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/siddharth-thakker.jpg",
+    "filename": "siddharth-thakker.jpg"
+  },
+  "/images/valencia-hero-waterfront.png": {
+    "id": 107,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/valencia-hero-waterfront.png",
+    "filename": "valencia-hero-waterfront.png"
+  },
+  "/images/valencia-hero.jpg": {
+    "id": 108,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/valencia-hero.jpg",
+    "filename": "valencia-hero.jpg"
+  },
+  "/images/why-us-luxury.jpg": {
+    "id": 109,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/why-us-luxury-1.jpg",
+    "filename": "why-us-luxury.jpg"
+  },
+  "/world-wide-logo.png": {
+    "id": 110,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/world-wide-logo.png",
+    "filename": "world-wide-logo.png"
+  },
+  "/worldwide-supply-28-logo-transparent.png": {
+    "id": 111,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/worldwide-supply-28-logo-transparent.png",
+    "filename": "worldwide-supply-28-logo-transparent.png"
+  },
+  "/worldwide-supply-28-logo.jpeg": {
+    "id": 112,
+    "url": "https://aquamarine-herring-353942.hostingersite.com/wp-content/uploads/worldwide-supply-28-logo.jpeg",
+    "filename": "worldwide-supply-28-logo.jpeg"
+  }
+}

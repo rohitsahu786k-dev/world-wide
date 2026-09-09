@@ -4,24 +4,33 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { siteData } from "@/data/siteData";
 import { Eye, MapPin, Sparkles, Target } from "lucide-react";
-
-const founders = [
-  {
-    name: "Siddharth Thakker",
-    role: { en: "Co-Founder & Director", es: "Cofundador y Director" },
-    image: "/images/team/siddharth-thakker.jpg",
-    alt: "Siddharth Thakker Co-Founder and Director Worldwide Supply 28 SL",
-  },
-  {
-    name: "Sakina Idmouhine",
-    role: { en: "Co-Founder & Director", es: "Cofundadora y Directora" },
-    image: "/images/team/sakina-idmouhine.jpg",
-    alt: "Sakina Idmouhine Co-Founder and Director Worldwide Supply 28 SL",
-  },
-];
+import { getWpMedia } from "@/lib/wp-media";
+import { useSiteSettings } from "@/context/SiteSettingsContext";
 
 export function AboutStorySection() {
   const { t } = useLanguage();
+  const { settings } = useSiteSettings();
+
+  const founders = [
+    {
+      name: settings.founders.siddharth.name || "Siddharth Thakker",
+      role: {
+        en: settings.founders.siddharth.role || "Co-Founder & Director",
+        es: "Cofundador y Director"
+      },
+      image: settings.founders.siddharth.image || getWpMedia("/images/team/siddharth-thakker.jpg"),
+      alt: "Siddharth Thakker Co-Founder and Director Worldwide Supply 28 SL",
+    },
+    {
+      name: settings.founders.sakina.name || "Sakina Idmouhine",
+      role: {
+        en: settings.founders.sakina.role || "Co-Founder & Director",
+        es: "Cofundadora y Directora"
+      },
+      image: settings.founders.sakina.image || getWpMedia("/images/team/sakina-idmouhine.jpg"),
+      alt: "Sakina Idmouhine Co-Founder and Director Worldwide Supply 28 SL",
+    },
+  ];
 
   return (
     <section className="bg-white py-14 text-[#071321] sm:py-16">

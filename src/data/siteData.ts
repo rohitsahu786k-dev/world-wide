@@ -1,3 +1,5 @@
+import { getWpMedia } from "@/lib/wp-media";
+
 export interface CategoryItem {
   id: string;
   name: { en: string; es: string };
@@ -290,3 +292,9 @@ export const siteData = {
     { en: "Trusted partner for brands seeking market entry and international expansion", es: "Socio de confianza para marcas que buscan la entrada en nuevos mercados y expansión internacional" }
   ]
 };
+
+// Automatically resolve category images to WordPress Media Library URLs
+siteData.categories = siteData.categories.map((c) => ({
+  ...c,
+  image: getWpMedia(c.image),
+}));

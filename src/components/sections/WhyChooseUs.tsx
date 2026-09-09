@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { siteData } from "@/data/siteData";
 import { ArrowRight, BadgeCheck, Boxes, Globe2, Handshake, ShieldCheck, Sparkles, Truck } from "lucide-react";
+import { getWpMedia } from "@/lib/wp-media";
 
 const capabilityCards = [
   {
@@ -86,7 +87,7 @@ export function WhyChooseUs({ compact = false }: { compact?: boolean }) {
 
           <div className="relative min-h-[340px] overflow-hidden rounded-[8px] border border-slate-200 bg-[#071321] shadow-sm lg:col-span-5">
             <Image
-              src="/images/client-supplied/why-us-luxury.jpg"
+              src={getWpMedia("/images/client-supplied/why-us-luxury.jpg")}
               alt="Worldwide Supply 28 SL wholesale and logistics operations"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"

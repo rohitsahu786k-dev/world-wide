@@ -6,6 +6,8 @@ import { useEffect, useState, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Menu, X, Globe, ChevronDown, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getWpMedia } from "@/lib/wp-media";
+import { useSiteSettings } from "@/context/SiteSettingsContext";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -13,6 +15,7 @@ export function Header() {
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { language, setLanguage, t } = useLanguage();
+  const { settings } = useSiteSettings();
 
   const languages = [
     { code: "en" as const, label: "English", shortLabel: "EN" },
@@ -45,6 +48,7 @@ export function Header() {
     { href: "/categories", label: t("Product Categories", "Categorías de Productos") },
     { href: "/services", label: t("Services", "Servicios") },
     { href: "/why-choose-us", label: t("Why Choose Us", "Por qué Elegirnos") },
+    { href: "/blog", label: t("Insights", "Perspectivas") },
     { href: "/contact", label: t("Contact Us", "Contacto") },
   ];
 
@@ -59,7 +63,7 @@ export function Header() {
         {/* Clean, Prominent Tightly-Cropped Logo */}
         <Link href="/" className="flex items-center shrink-0 group py-1" aria-label="Worldwide Supply 28 SL">
           <Image
-            src="/world-wide-logo.png"
+            src={settings.logos.header_logo || getWpMedia("/world-wide-logo.png")}
             alt="Worldwide Supply 28 SL Logo"
             width={240}
             height={100}

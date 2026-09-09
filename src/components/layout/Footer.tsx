@@ -5,9 +5,12 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { siteData } from "@/data/siteData";
 import { MapPin, Phone, Mail, Clock, ArrowUp } from "lucide-react";
+import { getWpMedia } from "@/lib/wp-media";
+import { useSiteSettings } from "@/context/SiteSettingsContext";
 
 export function Footer() {
   const { t } = useLanguage();
+  const { settings } = useSiteSettings();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -21,7 +24,7 @@ export function Footer() {
           <div className="flex flex-col space-y-6">
             <Link href="/" className="inline-block shrink-0">
               <Image
-                src="/world-wide-logo.png"
+                src={settings.logos.footer_logo || settings.logos.header_logo || getWpMedia("/world-wide-logo.png")}
                 alt="Worldwide Supply 28 SL Logo"
                 width={260}
                 height={110}
@@ -29,11 +32,11 @@ export function Footer() {
               />
             </Link>
             <p className="text-xs text-slate-600 leading-relaxed font-medium">
-              {t(siteData.company.subTagline.en, siteData.company.subTagline.es)}
+              {settings.company.subtagline || t(siteData.company.subTagline.en, siteData.company.subTagline.es)}
             </p>
             <div className="text-xs text-slate-500 space-y-1">
               <p className="font-semibold text-slate-700">Registered Company in Spain</p>
-              <p className="font-bold text-[#071321]">Tax ID (CIF): {siteData.company.cif}</p>
+              <p className="font-bold text-[#071321]">Tax ID (CIF): {settings.company.cif || siteData.company.cif}</p>
             </div>
           </div>
 
@@ -57,6 +60,9 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/why-choose-us" className="hover:text-[#00A884] transition">{t("Why Choose Us", "Por qué Elegirnos")}</Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-[#00A884] transition">{t("Insights & Notes", "Perspectivas y Notas")}</Link>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-[#00A884] transition">{t("Contact Us", "Contacto")}</Link>
@@ -88,30 +94,30 @@ export function Footer() {
             <ul className="space-y-4 text-xs font-medium text-slate-700">
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-[#00A884] shrink-0 mt-0.5" />
-                <span>{siteData.company.location.address}</span>
+                <span>{settings.contact.address || siteData.company.location.address}</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-4 w-4 text-[#00A884] shrink-0 mt-0.5" />
                 <div>
-                  <a href={`https://wa.me/${siteData.company.contact.whatsapp.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] font-bold block">
-                    Mobile - {siteData.company.contact.whatsapp}
+                  <a href={`https://wa.me/${(settings.contact.whatsapp || siteData.company.contact.whatsapp).replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] font-bold block">
+                    Mobile - {settings.contact.whatsapp || siteData.company.contact.whatsapp}
                   </a>
-                  {siteData.company.contact.whatsappSecondary && (
-                    <a href={`https://wa.me/${siteData.company.contact.whatsappSecondary.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-[11px] text-slate-600 block mt-0.5">
-                      Whatsapp - {siteData.company.contact.whatsappSecondary}
+                  {(settings.contact.whatsapp_secondary || siteData.company.contact.whatsappSecondary) && (
+                    <a href={`https://wa.me/${(settings.contact.whatsapp_secondary || siteData.company.contact.whatsappSecondary || "").replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-[11px] text-slate-600 block mt-0.5">
+                      Whatsapp - {settings.contact.whatsapp_secondary || siteData.company.contact.whatsappSecondary}
                     </a>
                   )}
                 </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-[#00A884] shrink-0" />
-                <a href={`mailto:${siteData.company.contact.email}`} className="hover:text-[#00A884] font-semibold">
-                  {siteData.company.contact.email}
+                <a href={`mailto:${settings.contact.email || siteData.company.contact.email}`} className="hover:text-[#00A884] font-semibold">
+                  {settings.contact.email || siteData.company.contact.email}
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="h-4 w-4 text-[#00A884] shrink-0 mt-0.5" />
-                <span>{t(siteData.company.contact.hours.en, siteData.company.contact.hours.es)}</span>
+                <span>{settings.contact.hours || t(siteData.company.contact.hours.en, siteData.company.contact.hours.es)}</span>
               </li>
             </ul>
           </div>
@@ -126,10 +132,10 @@ export function Footer() {
           </div>
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 hover:bg-slate-50 text-slate-700 font-semibold transition lg:mr-28"
+            className="flex items-center gap-2 hover:text-[#00A884] transition"
           >
-            <span>Back to Top</span>
-            <ArrowUp className="h-3.5 w-3.5 text-[#00A884]" />
+            <span>{t("Back to Top", "Volver Arriba")}</span>
+            <ArrowUp className="h-3.5 w-3.5" />
           </button>
         </div>
       </div>

@@ -1,0 +1,470 @@
+{
+  "key": "group_worldwide_supply_settings",
+  "title": "Worldwide Supply 28 - Site Content & Settings",
+  "fields": [
+    {
+      "key": "field_ww_tab_contact",
+      "label": "📞 Company & Contact Details",
+      "name": "",
+      "type": "tab",
+      "instructions": "Manage company information, contact details, phone numbers, and address.",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_ww_company_name",
+      "label": "Company Name",
+      "name": "company_name",
+      "type": "text",
+      "instructions": "Official registered company name",
+      "default_value": "WORLDWIDE SUPPLY 28 SL",
+      "placeholder": "WORLDWIDE SUPPLY 28 SL"
+    },
+    {
+      "key": "field_ww_company_cif",
+      "label": "CIF / Tax ID",
+      "name": "company_cif",
+      "type": "text",
+      "instructions": "Tax identification number (CIF)",
+      "default_value": "B26703769",
+      "placeholder": "B26703769"
+    },
+    {
+      "key": "field_ww_contact_phone",
+      "label": "Primary Phone Number",
+      "name": "contact_phone",
+      "type": "text",
+      "instructions": "Primary telephone number with country code",
+      "default_value": "+34 614850570"
+    },
+    {
+      "key": "field_ww_contact_whatsapp",
+      "label": "Primary WhatsApp Number",
+      "name": "contact_whatsapp",
+      "type": "text",
+      "instructions": "Primary WhatsApp number (format: +34 614850570)",
+      "default_value": "+34 614850570"
+    },
+    {
+      "key": "field_ww_contact_whatsapp_secondary",
+      "label": "Secondary WhatsApp Number",
+      "name": "contact_whatsapp_secondary",
+      "type": "text",
+      "instructions": "Secondary / 24-7 WhatsApp support number",
+      "default_value": "+34 614655587"
+    },
+    {
+      "key": "field_ww_contact_email",
+      "label": "Primary Contact Email",
+      "name": "contact_email",
+      "type": "email",
+      "instructions": "Official business inquiries email",
+      "default_value": "info@worldwidesupply28.com"
+    },
+    {
+      "key": "field_ww_contact_address",
+      "label": "Registered Office Address",
+      "name": "contact_address",
+      "type": "textarea",
+      "instructions": "Physical address of the office/headquarters",
+      "default_value": "Calle Carlos Cervera, 14, Bajo, 46006, Valencia, Spain",
+      "rows": 3
+    },
+    {
+      "key": "field_ww_contact_city",
+      "label": "City",
+      "name": "contact_city",
+      "type": "text",
+      "default_value": "Valencia"
+    },
+    {
+      "key": "field_ww_contact_country",
+      "label": "Country",
+      "name": "contact_country",
+      "type": "text",
+      "default_value": "Spain"
+    },
+    {
+      "key": "field_ww_contact_hours",
+      "label": "Office & Support Hours",
+      "name": "contact_hours",
+      "type": "text",
+      "default_value": "Office hours: Monday – Friday, 9:00 – 17:00 (CET). WhatsApp support available 24/7."
+    },
+    {
+      "key": "field_ww_company_tagline",
+      "label": "Company Tagline / Slogan",
+      "name": "company_tagline",
+      "type": "text",
+      "default_value": "CONNECTING MARKETS, DELIVERING EXCELLENCE"
+    },
+    {
+      "key": "field_ww_company_subtagline",
+      "label": "Company Subtagline / Mission Brief",
+      "name": "company_subtagline",
+      "type": "textarea",
+      "default_value": "Your trusted partner in luxury perfumery, cosmetics, lifestyle products and more, with reliable supply solutions worldwide.",
+      "rows": 2
+    },
+    {
+      "key": "field_ww_tab_logos",
+      "label": "🎨 Brand Logos & Favicon",
+      "name": "",
+      "type": "tab",
+      "instructions": "Upload and switch your site brand logos, headers, footers and favicon.",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_ww_brand_header_logo",
+      "label": "Header Logo",
+      "name": "brand_header_logo",
+      "type": "image",
+      "instructions": "Main logo shown in the website navigation bar",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_brand_footer_logo",
+      "label": "Footer Logo",
+      "name": "brand_footer_logo",
+      "type": "image",
+      "instructions": "Logo shown in the dark website footer",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_brand_transparent_logo",
+      "label": "Transparent / Monochrome Logo",
+      "name": "brand_transparent_logo",
+      "type": "image",
+      "instructions": "Transparent PNG logo for overlays and dark themes",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_brand_favicon",
+      "label": "Website Favicon / Icon",
+      "name": "brand_favicon",
+      "type": "image",
+      "instructions": "Browser tab favicon / app icon (.png or .ico)",
+      "return_format": "array",
+      "preview_size": "thumbnail",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_tab_hero",
+      "label": "🚀 Homepage Hero Banners",
+      "name": "",
+      "type": "tab",
+      "instructions": "Manage desktop & mobile banners for the homepage hero carousel.",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_ww_hero_desktop_banner_1",
+      "label": "Desktop Banner 1 (Luxury Products)",
+      "name": "hero_desktop_banner_1",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_hero_desktop_banner_2",
+      "label": "Desktop Banner 2 (Premium Lifestyle)",
+      "name": "hero_desktop_banner_2",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_hero_desktop_banner_3",
+      "label": "Desktop Banner 3 (Wholesale & Distribution)",
+      "name": "hero_desktop_banner_3",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_hero_mobile_banner_1",
+      "label": "Mobile Banner 1",
+      "name": "hero_mobile_banner_1",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_hero_mobile_banner_2",
+      "label": "Mobile Banner 2",
+      "name": "hero_mobile_banner_2",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_hero_mobile_banner_3",
+      "label": "Mobile Banner 3",
+      "name": "hero_mobile_banner_3",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_hero_badge",
+      "label": "Hero Badge Text",
+      "name": "hero_badge",
+      "type": "text",
+      "default_value": "Global Luxury Supply"
+    },
+    {
+      "key": "field_ww_hero_title",
+      "label": "Hero Main Headline",
+      "name": "hero_title",
+      "type": "text",
+      "default_value": "Luxury Goods Distribution Across Global Gateways"
+    },
+    {
+      "key": "field_ww_hero_stat_exp",
+      "label": "Highlight Stat 1: Years of Experience",
+      "name": "hero_stat_exp",
+      "type": "text",
+      "default_value": "15+"
+    },
+    {
+      "key": "field_ww_hero_stat_countries",
+      "label": "Highlight Stat 2: Countries Served",
+      "name": "hero_stat_countries",
+      "type": "text",
+      "default_value": "50+"
+    },
+    {
+      "key": "field_ww_tab_founders",
+      "label": "👥 Executive Leadership",
+      "name": "",
+      "type": "tab",
+      "instructions": "Manage Founder & Managing Director information and profile photos.",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_ww_founder_siddharth_name",
+      "label": "Founder 1 Name",
+      "name": "founder_siddharth_name",
+      "type": "text",
+      "default_value": "Siddharth Thakker"
+    },
+    {
+      "key": "field_ww_founder_siddharth_role",
+      "label": "Founder 1 Role / Title",
+      "name": "founder_siddharth_role",
+      "type": "text",
+      "default_value": "Co-Founder & Managing Partner"
+    },
+    {
+      "key": "field_ww_founder_siddharth_bio",
+      "label": "Founder 1 Biography",
+      "name": "founder_siddharth_bio",
+      "type": "textarea",
+      "default_value": "Siddharth Thakker grew up surrounded by the world of duty-free and wholesale trade, as part of a family business with deep roots in the wholesale and retail distribution sector. From an early age, he learned the value of strong supplier relationships, market instinct, and the discipline required to move goods reliably across borders.",
+      "rows": 4
+    },
+    {
+      "key": "field_ww_founder_siddharth_image",
+      "label": "Founder 1 Photo",
+      "name": "founder_siddharth_image",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_founder_sakina_name",
+      "label": "Founder 2 Name",
+      "name": "founder_sakina_name",
+      "type": "text",
+      "default_value": "Sakina Idmouhine"
+    },
+    {
+      "key": "field_ww_founder_sakina_role",
+      "label": "Founder 2 Role / Title",
+      "name": "founder_sakina_role",
+      "type": "text",
+      "default_value": "Co-Founder & Managing Partner"
+    },
+    {
+      "key": "field_ww_founder_sakina_bio",
+      "label": "Founder 2 Biography",
+      "name": "founder_sakina_bio",
+      "type": "textarea",
+      "default_value": "Sakina Idmouhine built her career within the perfumery and luxury cosmetics industry, spending over 15 years mastering the details that make this sector unique, from brand relationships to the expectations of international retailers and distributors.",
+      "rows": 4
+    },
+    {
+      "key": "field_ww_founder_sakina_image",
+      "label": "Founder 2 Photo",
+      "name": "founder_sakina_image",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_tab_about",
+      "label": "🏢 About & Facility Images",
+      "name": "",
+      "type": "tab",
+      "instructions": "Manage facility, distribution, and story images for the About Us page and sections.",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_ww_about_hero_banner",
+      "label": "About Hero Banner",
+      "name": "about_hero_banner",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_about_distribution_image",
+      "label": "Distribution & Logistics Image",
+      "name": "about_distribution_image",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_about_luxury_image",
+      "label": "Luxury Retail & Showroom Image",
+      "name": "about_luxury_image",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_about_warehouse_image",
+      "label": "Global Warehouse & Cargo Image",
+      "name": "about_warehouse_image",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_about_why_choose_us_banner",
+      "label": "Why Choose Us Banner",
+      "name": "about_why_choose_us_banner",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_tab_categories",
+      "label": "📦 Product Category Images",
+      "name": "",
+      "type": "tab",
+      "instructions": "Manage the primary feature images for each product category card.",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_ww_cat_perfumes_image",
+      "label": "Perfumes & Fragrances Image",
+      "name": "cat_perfumes_image",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_cat_niche_image",
+      "label": "Niche Fragrances Image",
+      "name": "cat_niche_image",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_cat_cosmetics_image",
+      "label": "Luxury Cosmetics & Skincare Image",
+      "name": "cat_cosmetics_image",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_cat_wines_image",
+      "label": "Wines, Spirits & Champagne Image",
+      "name": "cat_wines_image",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_cat_travel_sets_image",
+      "label": "Travel Sets & Kits Image",
+      "name": "cat_travel_sets_image",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_ww_cat_fashion_image",
+      "label": "Fashion & Textiles Image",
+      "name": "cat_fashion_image",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page",
+        "operator": "==",
+        "value": "122"
+      }
+    ],
+    [
+      {
+        "param": "page_slug",
+        "operator": "==",
+        "value": "site-settings"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "slug",
+    "author"
+  ],
+  "active": true,
+  "description": "Manage all site images, brand logos, hero banners, contact details, executive profiles, and category imagery.",
+  "show_in_rest": 1
+}

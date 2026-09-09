@@ -3,30 +3,31 @@
 import { useEffect, useRef } from "react";
 import { ArrowRight, Package, Search, Ship, Sparkles } from "@/components/ui/icons";
 import { services } from "@/data/services";
+import { getWpMedia } from "@/lib/wp-media";
 
 const serviceVisuals = [
   {
-    image: "/images/services/global-distribution.jpg",
+    image: getWpMedia("/images/services/global-distribution.jpg"),
     icon: Search,
   },
   {
-    image: "/images/services/logistics-management.jpg",
+    image: getWpMedia("/images/services/logistics-management.jpg"),
     icon: Sparkles,
   },
   {
-    image: "/images/services/brand-entry.jpg",
+    image: getWpMedia("/images/services/brand-entry.jpg"),
     icon: Ship,
   },
   {
-    image: "/images/services/sourcing-development.jpg",
+    image: getWpMedia("/images/services/sourcing-development.jpg"),
     icon: Package,
   },
   {
-    image: "/images/services/service-overview-5.jpg",
+    image: getWpMedia("/images/services/service-overview-5.jpg"),
     icon: Package,
   },
   {
-    image: "/images/services/service-overview-6.jpg",
+    image: getWpMedia("/images/services/service-overview-6.jpg"),
     icon: Search,
   },
 ];

@@ -5,6 +5,7 @@ import { CategoryGrid } from "@/components/sections/CategoryGrid";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { LogisticsTargetMarkets } from "@/components/sections/LogisticsTargetMarkets";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { BlogSection } from "@/components/sections/BlogSection";
 import { ContactInquirySection } from "@/components/sections/ContactInquirySection";
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function Home() {
       <ServicesSection compact />
       <LogisticsTargetMarkets compact />
       <WhyChooseUs />
+      <BlogSection />
       <ContactInquirySection />
     </>
   );
