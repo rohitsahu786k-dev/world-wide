@@ -67,11 +67,11 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
                   <div>
                     <span className="font-bold text-white block mb-0.5">{t("WhatsApp & Mobile (24/7)", "WhatsApp y Móvil (24/7)")}</span>
                     <a href={`https://wa.me/${siteData.company.contact.whatsapp.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] font-bold block text-sm">
-                      {siteData.company.contact.whatsapp}
+                      Mobile - {siteData.company.contact.whatsapp}
                     </a>
                     {siteData.company.contact.whatsappSecondary && (
                       <a href={`https://wa.me/${siteData.company.contact.whatsappSecondary.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-xs text-white/80 block mt-1">
-                        WhatsApp: {siteData.company.contact.whatsappSecondary}
+                        Whatsapp - {siteData.company.contact.whatsappSecondary}
                       </a>
                     )}
                   </div>
