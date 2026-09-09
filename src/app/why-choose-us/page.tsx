@@ -15,6 +15,7 @@ export default function WhyChooseUsPage() {
         eyebrow="Why Choose Us"
         title="Built for trust, consistency, and long-term trade"
         copy="A Spain-based wholesale partner combining 15+ years of experience, premium relationships, flexible sourcing, and international logistics discipline."
+        imageSrc="/images/heroes/hero-why-choose-us-banner-1.png"
       />
       <WhyChooseUs compact />
       <ContactInquirySection compact />

@@ -6,8 +6,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import { siteData } from "@/data/siteData";
 import { MapPin, ArrowRight } from "lucide-react";
 
-const heroDesktopImage = "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-luxury-products-banner-desktop-01.png";
-const heroMobileImage = "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-luxury-products-banner-mobile-01.png";
+const heroDesktopImage = "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-premium-lifestyle-banner-desktop-02.png";
+const heroMobileImage = "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-premium-collection-banner-mobile-02.png";
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -15,15 +15,16 @@ export function HeroSection() {
   return (
     <div className="relative w-full bg-white pt-20">
       {/* Main Hero Banner with Responsive Mobile & Desktop Banners */}
-      <section className="relative w-full min-h-[560px] overflow-hidden sm:h-[calc(100svh-5rem)] sm:min-h-[600px] sm:max-h-[760px]">
+      <section className="relative w-full min-h-[620px] overflow-hidden sm:h-[calc(100svh-5rem)] sm:min-h-[600px] sm:max-h-[760px]">
         {/* Desktop Background Image (Hidden on Mobile) */}
         <div className="absolute inset-0 z-0 hidden sm:block">
           <Image
             src={heroDesktopImage}
-            alt="Worldwide Supply 28 SL luxury products banner desktop"
+            alt="Worldwide Supply 28 SL premium lifestyle banner desktop"
             fill
             priority
-            className="object-cover object-right lg:object-center filter saturate-105"
+            sizes="(min-width: 640px) 100vw, 0vw"
+            className="object-cover object-center filter saturate-105"
           />
         </div>
 
@@ -31,18 +32,21 @@ export function HeroSection() {
         <div className="absolute inset-0 z-0 block sm:hidden">
           <Image
             src={heroMobileImage}
-            alt="Worldwide Supply 28 SL luxury products banner mobile"
+            alt="Worldwide Supply 28 SL premium collection banner mobile"
             fill
             priority
+            sizes="(max-width: 639px) 100vw, 0vw"
             className="object-cover object-center filter saturate-105"
           />
         </div>
 
-        {/* Light gradient mask keeps the banner visible while supporting text contrast. */}
-        <div className="absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(255,255,255,0.55)_0%,rgba(255,255,255,0.24)_38%,rgba(255,255,255,0)_68%)] sm:bg-[linear-gradient(90deg,rgba(255,255,255,0.58)_0%,rgba(255,255,255,0.22)_34%,rgba(255,255,255,0)_62%)]" aria-hidden="true" />
+        <div
+          className="absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.94)_0%,rgba(255,255,255,0.78)_34%,rgba(255,255,255,0.2)_64%,rgba(255,255,255,0)_100%)] sm:bg-[linear-gradient(90deg,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0.78)_28%,rgba(255,255,255,0.28)_54%,rgba(255,255,255,0)_76%)]"
+          aria-hidden="true"
+        />
 
         {/* Hero Content Layer */}
-        <div className="relative z-20 mx-auto flex h-full max-w-7xl items-center px-4 py-10 sm:px-6 lg:px-8">
+        <div className="relative z-20 mx-auto flex h-full max-w-7xl items-start px-4 pb-10 pt-12 sm:items-center sm:px-6 sm:py-10 lg:px-8">
           <div className="w-full max-w-md space-y-4 bg-transparent p-0 sm:max-w-lg sm:space-y-5 lg:max-w-2xl">
             {/* Location Tag */}
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-300/80 bg-white/95 px-3.5 sm:px-4 py-1.5 text-[11px] sm:text-xs font-bold text-[#00A884] shadow-xs">
@@ -51,12 +55,12 @@ export function HeroSection() {
             </div>
 
             {/* Main Headline - High Contrast Bold Typography on Sky */}
-            <h1 className="text-3xl font-semibold tracking-tight text-[#071321] leading-[1.1] drop-shadow-[0_2px_12px_rgba(255,255,255,0.95)] sm:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-semibold tracking-tight text-[#071321] leading-[1.08] drop-shadow-[0_2px_8px_rgba(255,255,255,0.9)] sm:text-5xl lg:text-6xl">
               {t(siteData.company.tagline.en, siteData.company.tagline.es)}
             </h1>
 
             {/* Sub-headline */}
-            <p className="max-w-xl text-sm font-semibold leading-relaxed text-slate-700 drop-shadow-[0_1px_8px_rgba(255,255,255,0.9)] sm:text-lg">
+            <p className="max-w-xl text-sm font-bold leading-relaxed text-slate-800 drop-shadow-[0_1px_8px_rgba(255,255,255,0.9)] sm:text-lg">
               {t(siteData.company.subTagline.en, siteData.company.subTagline.es)}
             </p>
 

@@ -37,9 +37,9 @@ export const siteData = {
       }
     },
     contact: {
-      phone: "+34 614655587",
-      whatsapp: "+34 614655587",
-      whatsappSecondary: "",
+      phone: "+34 614850570",
+      whatsapp: "+34 614850570",
+      whatsappSecondary: "+34 614655587",
       whatsappText: "Available 24/7",
       email: "info@worldwidesupply28.com",
       website: "www.worldwidesupply28.com",

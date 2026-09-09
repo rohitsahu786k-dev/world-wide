@@ -15,6 +15,7 @@ export default function CategoriesPage() {
         eyebrow="Product Categories"
         title="Premium categories for international wholesale"
         copy="Category-led B2B sourcing across perfumery, niche fragrances, cosmetics, skincare, wines and spirits, textiles, jewelry, accessories, and travel sets."
+        imageSrc="/images/heroes/hero-categories-banner-2.png"
       />
       <CategoryGrid compact />
       <ContactInquirySection compact />
