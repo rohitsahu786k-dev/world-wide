@@ -1,5 +1,6 @@
-const WP_BASE = 'https://aquamarine-herring-353942.hostingersite.com/wp-json/wp/v2';
-const WP_AUTH = 'Basic c3RoYWtrZXIzMkBnbWFpbC5jb206WEpCTSBZNklNIFRua3IgTDhNRiBLSDZWIFNVd3Q=';
+const WP_ORIGIN = (process.env.NEXT_PUBLIC_WP_BASE_URL || 'https://aquamarine-herring-353942.hostingersite.com').replace(/\/+$/, '');
+const WP_BASE = `${WP_ORIGIN}/wp-json/wp/v2`;
+const WP_AUTH = process.env.WP_BASIC_AUTH || 'Basic c3RoYWtrZXIzMkBnbWFpbC5jb206WEpCTSBZNklNIFRua3IgTDhNRiBLSDZWIFNVd3Q=';
 
 export interface WordPressMedia {
   id: number;
