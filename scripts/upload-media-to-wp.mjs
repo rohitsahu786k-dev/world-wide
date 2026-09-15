@@ -1,8 +1,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const WP_URL = 'https://aquamarine-herring-353942.hostingersite.com';
-const AUTH = 'Basic c3RoYWtrZXIzMkBnbWFpbC5jb206WEpCTSBZNklNIFRua3IgTDhNRiBLSDZWIFNVd3Q=';
+// Load .env.local so credentials never live in source (Node >= 20.12).
+try { process.loadEnvFile('.env.local'); } catch { /* absent: fall back to real env */ }
+
+const WP_URL = (process.env.NEXT_PUBLIC_WP_BASE_URL || '').replace(/\/+$/, '');
+const AUTH = process.env.WP_BASIC_AUTH || '';
+
+if (!WP_URL || !AUTH) {
+  console.error('Missing NEXT_PUBLIC_WP_BASE_URL or WP_BASIC_AUTH. Set them in .env.local.');
+  process.exit(1);
+}
 const MAP_FILE = path.join(process.cwd(), 'src/data/wpMediaMap.json');
 
 const MIME_TYPES = {
