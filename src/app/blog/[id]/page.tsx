@@ -10,6 +10,15 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
+export async function generateStaticParams() {
+  try {
+    const posts = await getPosts();
+    return posts.map((post) => ({ id: String(post.id) }));
+  } catch {
+    return [];
+  }
+}
+
 export async function generateMetadata({ params }: PageProps) {
   const { id } = await params;
   const post = await getPost(id);

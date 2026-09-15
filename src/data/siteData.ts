@@ -1,5 +1,16 @@
 import { getWpMedia } from "@/lib/wp-media";
 
+const supportPhone = process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY || process.env.NEXT_PUBLIC_SUPPORT_PHONE || "+34 614850570";
+const supportWhatsapp =
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE ||
+  (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ? `+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER.replace(/^\+/, "")}` : "+34 614850570");
+const supportWhatsappSecondary =
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY_DISPLAY ||
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY ||
+  process.env.NEXT_PUBLIC_WHATSAPP_SECONDARY ||
+  "";
+
 export interface CategoryItem {
   id: string;
   name: { en: string; es: string };
@@ -39,9 +50,9 @@ export const siteData = {
       }
     },
     contact: {
-      phone: "+34 614850570",
-      whatsapp: "+34 614850570",
-      whatsappSecondary: "+34 614655587",
+      phone: supportPhone,
+      whatsapp: supportWhatsapp,
+      whatsappSecondary: supportWhatsappSecondary,
       whatsappText: "Available 24/7",
       email: "info@worldwidesupply28.com",
       website: "www.worldwidesupply28.com",

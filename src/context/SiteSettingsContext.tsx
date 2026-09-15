@@ -3,6 +3,24 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { WpSiteSettings, defaultSiteSettings } from "@/lib/wp-settings";
 
+const SUPPORT_PHONE =
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE ||
+  defaultSiteSettings.contact.phone;
+
+const SUPPORT_WHATSAPP =
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE ||
+  (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
+    ? `+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER.replace(/^\+/, "")}`
+    : defaultSiteSettings.contact.whatsapp);
+
+const SUPPORT_WHATSAPP_SECONDARY =
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY_DISPLAY ||
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY ||
+  process.env.NEXT_PUBLIC_WHATSAPP_SECONDARY ||
+  "";
+
 interface SiteSettingsContextValue {
   settings: WpSiteSettings;
   isLoading: boolean;
@@ -28,7 +46,8 @@ export function SiteSettingsProvider({
   const fetchSettings = async () => {
     try {
       setIsLoading(true);
-      const res = await fetch("https://aquamarine-herring-353942.hostingersite.com/wp-json/worldwide/v1/settings");
+      const wpOrigin = (process.env.NEXT_PUBLIC_WP_BASE_URL || "").replace(/\/+$/, "");
+      const res = await fetch(`${wpOrigin}/wp-json/worldwide/v1/settings`);
       if (res.ok) {
         const data = await res.json();
         setSettings((prev) => ({
@@ -39,9 +58,9 @@ export function SiteSettingsProvider({
             subtagline: data.company?.subtagline || prev.company.subtagline,
           },
           contact: {
-            phone: data.contact?.phone || prev.contact.phone,
-            whatsapp: data.contact?.whatsapp || prev.contact.whatsapp,
-            whatsapp_secondary: data.contact?.whatsapp_secondary || prev.contact.whatsapp_secondary,
+            phone: SUPPORT_PHONE,
+            whatsapp: SUPPORT_WHATSAPP,
+            whatsapp_secondary: SUPPORT_WHATSAPP_SECONDARY,
             email: data.contact?.email || prev.contact.email,
             address: data.contact?.address || prev.contact.address,
             city: data.contact?.city || prev.contact.city,
@@ -59,8 +78,8 @@ export function SiteSettingsProvider({
             title: data.hero?.title || prev.hero.title,
             stat_exp: data.hero?.stat_exp || prev.hero.stat_exp,
             stat_countries: data.hero?.stat_countries || prev.hero.stat_countries,
-            desktop_banners: data.hero?.desktop_banners?.length ? data.hero.desktop_banners : prev.hero.desktop_banners,
-            mobile_banners: data.hero?.mobile_banners?.length ? data.hero.mobile_banners : prev.hero.mobile_banners,
+            desktop_banners: defaultSiteSettings.hero.desktop_banners,
+            mobile_banners: defaultSiteSettings.hero.mobile_banners,
           },
           founders: {
             siddharth: {

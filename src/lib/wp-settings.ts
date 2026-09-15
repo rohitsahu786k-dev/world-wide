@@ -1,5 +1,41 @@
 import { getWpMedia } from "./wp-media";
 
+const hasPrimaryContactEnv = Boolean(
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE ||
+    process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
+);
+
+const SUPPORT_PHONE =
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE ||
+  "+34 614850570";
+
+const SUPPORT_WHATSAPP =
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE ||
+  (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
+    ? `+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER.replace(/^\+/, "")}`
+    : "+34 614850570");
+
+const SUPPORT_WHATSAPP_SECONDARY =
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY_DISPLAY ||
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY ||
+  process.env.NEXT_PUBLIC_WHATSAPP_SECONDARY ||
+  (hasPrimaryContactEnv ? "" : "+34 614655587");
+
+const HERO_DESKTOP_BANNERS = [
+  "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-premium-lifestyle-banner-desktop-02.png",
+  "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-luxury-products-banner-desktop-01.png",
+  "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-wholesale-banner-desktop-03.png",
+];
+
+const HERO_MOBILE_BANNERS = [
+  "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-premium-collection-banner-mobile-02.png",
+  "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-luxury-products-banner-mobile-01.png",
+  "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-wholesale-lifestyle-banner-mobile-03.png",
+];
+
 export interface WpSiteSettings {
   company: {
     name: string;
@@ -70,9 +106,9 @@ export const defaultSiteSettings: WpSiteSettings = {
     subtagline: "Your trusted partner in luxury perfumery, cosmetics, lifestyle products and more, with reliable supply solutions worldwide.",
   },
   contact: {
-    phone: "+34 614850570",
-    whatsapp: "+34 614850570",
-    whatsapp_secondary: "+34 614655587",
+    phone: SUPPORT_PHONE,
+    whatsapp: SUPPORT_WHATSAPP,
+    whatsapp_secondary: SUPPORT_WHATSAPP_SECONDARY,
     email: "info@worldwidesupply28.com",
     address: "Calle Carlos Cervera, 14, Bajo, 46006, Valencia, Spain",
     city: "Valencia",
@@ -90,16 +126,8 @@ export const defaultSiteSettings: WpSiteSettings = {
     title: "Luxury Goods Distribution Across Global Gateways",
     stat_exp: "15+",
     stat_countries: "50+",
-    desktop_banners: [
-      getWpMedia("/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-luxury-products-banner-desktop-01.png"),
-      getWpMedia("/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-premium-lifestyle-banner-desktop-02.png"),
-      getWpMedia("/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-wholesale-banner-desktop-03.png"),
-    ],
-    mobile_banners: [
-      getWpMedia("/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-luxury-products-banner-mobile-01.png"),
-      getWpMedia("/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-premium-collection-banner-mobile-02.png"),
-      getWpMedia("/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-wholesale-lifestyle-banner-mobile-03.png"),
-    ],
+    desktop_banners: HERO_DESKTOP_BANNERS,
+    mobile_banners: HERO_MOBILE_BANNERS,
   },
   founders: {
     siddharth: {
@@ -132,7 +160,7 @@ export const defaultSiteSettings: WpSiteSettings = {
   },
 };
 
-const WP_SETTINGS_API = "https://aquamarine-herring-353942.hostingersite.com/wp-json/worldwide/v1/settings";
+const WP_SETTINGS_API = `${(process.env.NEXT_PUBLIC_WP_BASE_URL || "").replace(/\/+$/, "")}/wp-json/worldwide/v1/settings`;
 
 /**
  * Fetch dynamic ACF site settings from WordPress with robust fallback
@@ -156,9 +184,9 @@ export async function getWpSiteSettings(): Promise<WpSiteSettings> {
         subtagline: data.company?.subtagline || defaultSiteSettings.company.subtagline,
       },
       contact: {
-        phone: data.contact?.phone || defaultSiteSettings.contact.phone,
-        whatsapp: data.contact?.whatsapp || defaultSiteSettings.contact.whatsapp,
-        whatsapp_secondary: data.contact?.whatsapp_secondary || defaultSiteSettings.contact.whatsapp_secondary,
+        phone: SUPPORT_PHONE,
+        whatsapp: SUPPORT_WHATSAPP,
+        whatsapp_secondary: SUPPORT_WHATSAPP_SECONDARY || data.contact?.whatsapp_secondary || "",
         email: data.contact?.email || defaultSiteSettings.contact.email,
         address: data.contact?.address || defaultSiteSettings.contact.address,
         city: data.contact?.city || defaultSiteSettings.contact.city,
@@ -176,12 +204,8 @@ export async function getWpSiteSettings(): Promise<WpSiteSettings> {
         title: data.hero?.title || defaultSiteSettings.hero.title,
         stat_exp: data.hero?.stat_exp || defaultSiteSettings.hero.stat_exp,
         stat_countries: data.hero?.stat_countries || defaultSiteSettings.hero.stat_countries,
-        desktop_banners: data.hero?.desktop_banners?.length
-          ? data.hero.desktop_banners
-          : defaultSiteSettings.hero.desktop_banners,
-        mobile_banners: data.hero?.mobile_banners?.length
-          ? data.hero.mobile_banners
-          : defaultSiteSettings.hero.mobile_banners,
+        desktop_banners: defaultSiteSettings.hero.desktop_banners,
+        mobile_banners: defaultSiteSettings.hero.mobile_banners,
       },
       founders: {
         siddharth: {

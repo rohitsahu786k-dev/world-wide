@@ -1,12 +1,15 @@
 import { getWpMedia } from "@/lib/wp-media";
 
+const supportPhone = process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY || process.env.NEXT_PUBLIC_SUPPORT_PHONE || "+34 614850570";
+const supportPhoneHref = `tel:${supportPhone.replace(/[^0-9+]/g, "")}`;
+
 export const site = {
   name: "Worldwide Supply 28",
   tagline: "A Legacy of Trust. A World of Opportunities.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.worldwidesupply28.com",
   email: "trading@worldwidesupply28.com",
-  phone: "+34 614850570",
-  phoneHref: "tel:+34614850570",
+  phone: supportPhone,
+  phoneHref: supportPhoneHref,
   address: "Calle Carlos Cervera, 14, Bajo, 46006 Valencia, Spain",
   city: "Valencia, Spain",
   director: "Sakina Idmouhine",

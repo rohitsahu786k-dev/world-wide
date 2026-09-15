@@ -210,7 +210,7 @@ export default function BlogManagePage() {
                 WordPress Blog & Insights Control Center
               </h1>
               <p className="mt-1 text-sm text-[#102033]/65">
-                Connected to <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-[#123A5A]">aquamarine-herring-353942.hostingersite.com</code>
+                Connected to <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-[#123A5A]">{(process.env.NEXT_PUBLIC_WP_BASE_URL || "").replace(/^https?:\/\//, "").replace(/\/+$/, "")}</code>
               </p>
             </div>
 
