@@ -1,9 +1,12 @@
 import { getWpMedia } from "./wp-media";
 
+// The primary env vars carry the WhatsApp line, the secondary ones the mobile
+// line — the names predate that split. `phone` is the mobile line, so it reads
+// the secondary chain.
 const SUPPORT_PHONE =
-  process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||
-  process.env.NEXT_PUBLIC_SUPPORT_PHONE ||
-  "+34 614850570";
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY_DISPLAY ||
+  process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY ||
+  "+34 614655587";
 
 const SUPPORT_WHATSAPP =
   process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||

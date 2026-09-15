@@ -7,7 +7,8 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function WhatsAppWidget() {
   const { settings } = useSiteSettings();
-  const phone = (settings.contact.whatsapp || settings.contact.phone || siteData.company.contact.whatsapp).replace(/[^0-9]/g, "");
+  // Always the WhatsApp line — never fall back to contact.phone, which is the mobile.
+  const phone = (settings.contact.whatsapp || siteData.company.contact.whatsapp).replace(/[^0-9]/g, "");
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(
     "Hello Worldwide Supply 28 SL, I would like to inquire about your wholesale luxury products."
   )}`;

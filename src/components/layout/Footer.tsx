@@ -12,8 +12,10 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 export function Footer() {
   const { t } = useLanguage();
   const { settings } = useSiteSettings();
-  const mobileNumber = settings.contact.phone || siteData.company.contact.phone;
-  const whatsappNumber = settings.contact.whatsapp_secondary || siteData.company.contact.whatsappSecondary;
+  // ACF holds the WhatsApp line in `whatsapp` and the mobile line in
+  // `whatsapp_secondary`; the field names predate the split, the values are right.
+  const whatsappNumber = settings.contact.whatsapp || siteData.company.contact.whatsapp;
+  const mobileNumber = settings.contact.whatsapp_secondary || siteData.company.contact.whatsappSecondary;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -100,14 +102,14 @@ export function Footer() {
                 <span>{settings.contact.address || siteData.company.location.address}</span>
               </li>
               <li>
-                <a href={`tel:${mobileNumber.replace(/[^0-9+]/g, "")}`} className="flex items-center gap-3 hover:text-[#00A884]">
-                  <Phone className="h-4 w-4 text-[#00A884] shrink-0" />
-                  <span>{mobileNumber}</span>
+                <a href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-[#00A884]">
+                  <WhatsAppIcon className="h-4 w-4 text-[#25D366] shrink-0" />
+                  <span>{whatsappNumber}</span>
                 </a>
-                {whatsappNumber && (
-                  <a href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center gap-3 hover:text-[#00A884]">
-                    <WhatsAppIcon className="h-4 w-4 text-[#25D366] shrink-0" />
-                    <span>{whatsappNumber}</span>
+                {mobileNumber && (
+                  <a href={`tel:${mobileNumber.replace(/[^0-9+]/g, "")}`} className="mt-2 flex items-center gap-3 hover:text-[#00A884]">
+                    <Phone className="h-4 w-4 text-[#00A884] shrink-0" />
+                    <span>{mobileNumber}</span>
                   </a>
                 )}
               </li>

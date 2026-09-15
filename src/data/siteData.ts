@@ -1,6 +1,7 @@
 import { getWpMedia } from "@/lib/wp-media";
 
-const supportPhone = process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY || process.env.NEXT_PUBLIC_SUPPORT_PHONE || "+34 614850570";
+// Mobile line — the *_SECONDARY env vars carry it; the primary ones are WhatsApp.
+const supportPhone = process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY_DISPLAY || process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY || "+34 614655587";
 const supportWhatsapp =
   process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||
   process.env.NEXT_PUBLIC_SUPPORT_PHONE ||
