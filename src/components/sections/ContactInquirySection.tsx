@@ -19,7 +19,7 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
     message: ""
   });
 
-  const whatsappNumber = settings.contact.whatsapp || siteData.company.contact.whatsapp;
+  const mobileNumber = settings.contact.phone || siteData.company.contact.phone;
   const whatsappSecondaryNumber = settings.contact.whatsapp_secondary || siteData.company.contact.whatsappSecondary;
   const contactEmail = settings.contact.email || siteData.company.contact.email;
   const contactAddress = settings.contact.address || siteData.company.location.address;
@@ -73,9 +73,9 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-[#00A884] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-white block mb-0.5">{t("WhatsApp & Mobile (24/7)", "WhatsApp y Móvil (24/7)")}</span>
-                    <a href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] font-bold block text-sm">
-                      Mobile - {whatsappNumber}
+                    <span className="font-bold text-white block mb-0.5">{t("Mobile & Whatsapp (24/7)", "Móvil y Whatsapp (24/7)")}</span>
+                    <a href={`tel:${mobileNumber.replace(/[^0-9+]/g, "")}`} className="hover:text-[#00A884] font-bold block text-sm">
+                      Mobile - {mobileNumber}
                     </a>
                     {whatsappSecondaryNumber && (
                       <a href={`https://wa.me/${whatsappSecondaryNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-xs text-white/80 block mt-1">

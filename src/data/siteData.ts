@@ -9,7 +9,7 @@ const supportWhatsappSecondary =
   process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY_DISPLAY ||
   process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY ||
   process.env.NEXT_PUBLIC_WHATSAPP_SECONDARY ||
-  "";
+  "+34 614655587";
 
 export interface CategoryItem {
   id: string;

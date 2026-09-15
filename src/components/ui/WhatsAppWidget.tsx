@@ -6,7 +6,7 @@ import { useSiteSettings } from "@/context/SiteSettingsContext";
 
 export function WhatsAppWidget() {
   const { settings } = useSiteSettings();
-  const phone = (settings.contact.whatsapp || siteData.company.contact.whatsapp).replace(/[^0-9]/g, "");
+  const phone = (settings.contact.whatsapp || settings.contact.phone || siteData.company.contact.whatsapp).replace(/[^0-9]/g, "");
   const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(
     "Hello Worldwide Supply 28 SL, I would like to inquire about your wholesale luxury products."
   )}`;

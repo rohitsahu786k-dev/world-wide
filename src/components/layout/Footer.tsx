@@ -11,6 +11,8 @@ import { useSiteSettings } from "@/context/SiteSettingsContext";
 export function Footer() {
   const { t } = useLanguage();
   const { settings } = useSiteSettings();
+  const mobileNumber = settings.contact.phone || siteData.company.contact.phone;
+  const whatsappNumber = settings.contact.whatsapp_secondary || siteData.company.contact.whatsappSecondary;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -99,12 +101,12 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="h-4 w-4 text-[#00A884] shrink-0 mt-0.5" />
                 <div>
-                  <a href={`https://wa.me/${(settings.contact.whatsapp || siteData.company.contact.whatsapp).replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] font-bold block">
-                    Mobile - {settings.contact.whatsapp || siteData.company.contact.whatsapp}
+                  <a href={`tel:${mobileNumber.replace(/[^0-9+]/g, "")}`} className="hover:text-[#00A884] font-bold block">
+                    Mobile - {mobileNumber}
                   </a>
-                  {(settings.contact.whatsapp_secondary || siteData.company.contact.whatsappSecondary) && (
-                    <a href={`https://wa.me/${(settings.contact.whatsapp_secondary || siteData.company.contact.whatsappSecondary || "").replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-[11px] text-slate-600 block mt-0.5">
-                      Whatsapp - {settings.contact.whatsapp_secondary || siteData.company.contact.whatsappSecondary}
+                  {whatsappNumber && (
+                    <a href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-[11px] text-slate-600 block mt-0.5">
+                      Whatsapp - {whatsappNumber}
                     </a>
                   )}
                 </div>

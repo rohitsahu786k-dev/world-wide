@@ -19,7 +19,7 @@ const SUPPORT_WHATSAPP_SECONDARY =
   process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY_DISPLAY ||
   process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY ||
   process.env.NEXT_PUBLIC_WHATSAPP_SECONDARY ||
-  "";
+  defaultSiteSettings.contact.whatsapp_secondary;
 
 interface SiteSettingsContextValue {
   settings: WpSiteSettings;

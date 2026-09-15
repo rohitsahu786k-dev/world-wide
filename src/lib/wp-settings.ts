@@ -1,11 +1,5 @@
 import { getWpMedia } from "./wp-media";
 
-const hasPrimaryContactEnv = Boolean(
-  process.env.NEXT_PUBLIC_SUPPORT_PHONE ||
-    process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||
-    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
-);
-
 const SUPPORT_PHONE =
   process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||
   process.env.NEXT_PUBLIC_SUPPORT_PHONE ||
@@ -22,7 +16,7 @@ const SUPPORT_WHATSAPP_SECONDARY =
   process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY_DISPLAY ||
   process.env.NEXT_PUBLIC_SUPPORT_PHONE_SECONDARY ||
   process.env.NEXT_PUBLIC_WHATSAPP_SECONDARY ||
-  (hasPrimaryContactEnv ? "" : "+34 614655587");
+  "+34 614655587";
 
 const HERO_DESKTOP_BANNERS = [
   "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-premium-lifestyle-banner-desktop-02.png",
