@@ -8,8 +8,8 @@ import { MapPin, ArrowRight } from "lucide-react";
 import { getWpMedia } from "@/lib/wp-media";
 import { useSiteSettings } from "@/context/SiteSettingsContext";
 
-const heroDesktopDefault = getWpMedia("/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-premium-lifestyle-banner-desktop-02.png");
-const heroMobileDefault = getWpMedia("/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-premium-collection-banner-mobile-02.png");
+const heroDesktopDefault = getWpMedia("/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-luxury-showcase-banner-desktop-04.png");
+const heroMobileDefault = getWpMedia("/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-luxury-showcase-banner-mobile-04.png");
 
 export function HeroSection() {
   const { t } = useLanguage();

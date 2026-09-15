@@ -19,12 +19,14 @@ const SUPPORT_WHATSAPP_SECONDARY =
   "+34 614655587";
 
 const HERO_DESKTOP_BANNERS = [
+  "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-luxury-showcase-banner-desktop-04.png",
   "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-premium-lifestyle-banner-desktop-02.png",
   "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-luxury-products-banner-desktop-01.png",
   "/banner-img/worldwide-supply-28-sl/desktop/worldwide-supply-28-sl-wholesale-banner-desktop-03.png",
 ];
 
 const HERO_MOBILE_BANNERS = [
+  "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-luxury-showcase-banner-mobile-04.png",
   "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-premium-collection-banner-mobile-02.png",
   "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-luxury-products-banner-mobile-01.png",
   "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-wholesale-lifestyle-banner-mobile-03.png",

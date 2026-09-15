@@ -7,6 +7,7 @@ import { siteData } from "@/data/siteData";
 import { MapPin, Phone, Mail, Clock, ArrowUp } from "lucide-react";
 import { getWpMedia } from "@/lib/wp-media";
 import { useSiteSettings } from "@/context/SiteSettingsContext";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -98,18 +99,17 @@ export function Footer() {
                 <MapPin className="h-4 w-4 text-[#00A884] shrink-0 mt-0.5" />
                 <span>{settings.contact.address || siteData.company.location.address}</span>
               </li>
-              <li className="flex items-start gap-3">
-                <Phone className="h-4 w-4 text-[#00A884] shrink-0 mt-0.5" />
-                <div>
-                  <a href={`tel:${mobileNumber.replace(/[^0-9+]/g, "")}`} className="hover:text-[#00A884] font-bold block">
-                    Mobile - {mobileNumber}
+              <li>
+                <a href={`tel:${mobileNumber.replace(/[^0-9+]/g, "")}`} className="flex items-center gap-3 hover:text-[#00A884]">
+                  <Phone className="h-4 w-4 text-[#00A884] shrink-0" />
+                  <span>{mobileNumber}</span>
+                </a>
+                {whatsappNumber && (
+                  <a href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center gap-3 hover:text-[#00A884]">
+                    <WhatsAppIcon className="h-4 w-4 text-[#25D366] shrink-0" />
+                    <span>{whatsappNumber}</span>
                   </a>
-                  {whatsappNumber && (
-                    <a href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-[11px] text-slate-600 block mt-0.5">
-                      Whatsapp - {whatsappNumber}
-                    </a>
-                  )}
-                </div>
+                )}
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-[#00A884] shrink-0" />

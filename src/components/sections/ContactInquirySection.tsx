@@ -5,6 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { siteData } from "@/data/siteData";
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
 import { useSiteSettings } from "@/context/SiteSettingsContext";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function ContactInquirySection({ compact = false }: { compact?: boolean }) {
   const { t } = useLanguage();
@@ -73,13 +74,15 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-[#00A884] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-white block mb-0.5">{t("Mobile & Whatsapp (24/7)", "Móvil y Whatsapp (24/7)")}</span>
-                    <a href={`tel:${mobileNumber.replace(/[^0-9+]/g, "")}`} className="hover:text-[#00A884] font-bold block text-sm">
-                      Mobile - {mobileNumber}
+                    <span className="font-bold text-white block mb-1">{t("Mobile & Whatsapp (24/7)", "Móvil y Whatsapp (24/7)")}</span>
+                    <a href={`tel:${mobileNumber.replace(/[^0-9+]/g, "")}`} className="flex items-center gap-2 text-sm hover:text-[#00A884]">
+                      <Phone className="h-4 w-4 text-[#00A884] shrink-0" />
+                      <span>{mobileNumber}</span>
                     </a>
                     {whatsappSecondaryNumber && (
-                      <a href={`https://wa.me/${whatsappSecondaryNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#00A884] text-xs text-white/80 block mt-1">
-                        Whatsapp - {whatsappSecondaryNumber}
+                      <a href={`https://wa.me/${whatsappSecondaryNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="mt-1.5 flex items-center gap-2 text-sm hover:text-[#00A884]">
+                        <WhatsAppIcon className="h-4 w-4 text-[#25D366] shrink-0" />
+                        <span>{whatsappSecondaryNumber}</span>
                       </a>
                     )}
                   </div>

@@ -154,7 +154,7 @@ export const siteData = {
         en: "High-end luxury perfumes from premier global fashion houses and prestige beauty groups.",
         es: "Perfumes de lujo de alta gama de las principales casas de moda y grupos de belleza prestige."
       },
-      image: "/images/categories/perfumes-fragrances.jpg",
+      image: "/images/client-supplied/category-perfumes-fragrances.jpg",
       badge: { en: "Prestige Brands", es: "Marcas Prestige" }
     },
     {
@@ -194,7 +194,7 @@ export const siteData = {
         en: "Tailored travel retail exclusives, fragrance miniatures, and multi-piece gift box sets.",
         es: "Exclusivos de travel retail a medida, miniaturas de fragancias y juegos de regalos en estuches de lujo."
       },
-      image: "/images/categories/travel-sets-airport-kit.png",
+      image: "/images/why-us-luxury.jpg",
       badge: { en: "Travel Retail Exclusives", es: "Exclusivos Travel Retail" }
     },
     {
