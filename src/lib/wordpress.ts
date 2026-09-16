@@ -9,6 +9,11 @@ const authHeaders: Record<string, string> = process.env.WP_BASIC_AUTH
   ? { Authorization: process.env.WP_BASIC_AUTH }
   : {};
 
+// Static generation aborts a page that takes over 60s. A slow or throttled
+// WordPress must fail fast and leave the page to render empty rather than take
+// the whole build down.
+const WP_FETCH_TIMEOUT_MS = 8000;
+
 export interface WordPressMedia {
   id: number;
   source_url: string;
@@ -112,6 +117,7 @@ export async function getPosts(params: {
   try {
     const res = await fetch(`${WP_BASE}/posts?${query.toString()}`, {
       headers: authHeaders,
+      signal: AbortSignal.timeout(WP_FETCH_TIMEOUT_MS),
       next: { revalidate: 60 },
     });
 
@@ -135,6 +141,7 @@ export async function getPost(id: number | string): Promise<BlogPostFormatted | 
   try {
     const res = await fetch(`${WP_BASE}/posts/${id}?_embed=1`, {
       headers: authHeaders,
+      signal: AbortSignal.timeout(WP_FETCH_TIMEOUT_MS),
       next: { revalidate: 30 },
     });
 

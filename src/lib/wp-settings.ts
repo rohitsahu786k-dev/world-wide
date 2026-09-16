@@ -228,7 +228,17 @@ export const defaultSiteSettings: WpSiteSettings = {
   },
 };
 
-const WP_SETTINGS_API = `${(process.env.NEXT_PUBLIC_WP_BASE_URL || "").replace(/\/+$/, "")}/wp-json/worldwide/v1/settings`;
+const WP_ORIGIN = (process.env.NEXT_PUBLIC_WP_BASE_URL || "").replace(/\/+$/, "");
+const WP_SETTINGS_API = `${WP_ORIGIN}/wp-json/worldwide/v1/settings`;
+
+/**
+ * Budget for a build-time call to WordPress. Static generation aborts a page
+ * that takes over 60s, so an unreachable or throttled backend must fail fast
+ * and fall back to the defaults rather than take the whole build down with it.
+ * The browser refetches on load anyway, so a missed build-time read is only a
+ * stale first paint, never missing content.
+ */
+const WP_FETCH_TIMEOUT_MS = 8000;
 
 type Loose = Record<string, any>;
 
@@ -308,9 +318,14 @@ export function normalizeAboutContent(
  * Fetch dynamic ACF site settings from WordPress with robust fallback
  */
 export async function getWpSiteSettings(): Promise<WpSiteSettings> {
+  // Without an origin the URL would be relative, which cannot be fetched from
+  // the build. Skip straight to the defaults instead of throwing per page.
+  if (!WP_ORIGIN) return defaultSiteSettings;
+
   try {
     const res = await fetch(WP_SETTINGS_API, {
       next: { revalidate: 60 },
+      signal: AbortSignal.timeout(WP_FETCH_TIMEOUT_MS),
     });
 
     if (!res.ok) {

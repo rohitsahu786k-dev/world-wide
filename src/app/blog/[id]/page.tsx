@@ -11,12 +11,23 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  try {
+  // `output: export` rejects an empty param list outright ("missing
+  // generateStaticParams()"), so a single slow response from WordPress used to
+  // take the whole build down with a misleading error. Retry a few times to ride
+  // out a blip, and if the backend really is unreachable, say so plainly —
+  // shipping a blog with no articles would be the worse outcome.
+  for (let attempt = 1; attempt <= 3; attempt++) {
     const posts = await getPosts();
-    return posts.map((post) => ({ id: String(post.id) }));
-  } catch {
-    return [];
+    if (posts.length > 0) {
+      return posts.map((post) => ({ id: String(post.id) }));
+    }
+    console.warn(`No posts returned from WordPress (attempt ${attempt} of 3)`);
   }
+
+  throw new Error(
+    "Could not load any posts from WordPress after 3 attempts. Check that " +
+      "NEXT_PUBLIC_WP_BASE_URL is set and the backend is reachable from the build."
+  );
 }
 
 export async function generateMetadata({ params }: PageProps) {
