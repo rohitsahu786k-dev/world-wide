@@ -52,13 +52,6 @@ export default async function SingleBlogPage({ params }: PageProps) {
               {post.title}
             </span>
           </div>
-
-          <Link
-            href="/blog/manage"
-            className="text-xs font-semibold text-[#207B68] hover:text-[#123A5A] underline decoration-[#207B68]/30 underline-offset-4"
-          >
-            Edit in Dashboard
-          </Link>
         </div>
       </div>
 

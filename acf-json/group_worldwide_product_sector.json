@@ -1,0 +1,239 @@
+{
+  "key": "group_worldwide_product_sector",
+  "title": "Product Sector - Card Content",
+  "fields": [
+    {
+      "key": "field_ws_sector_tab_content",
+      "label": "Sector Card",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_ws_sector_name_es",
+      "label": "Sector Name (Spanish)",
+      "name": "sector_name_es",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Shown when a visitor switches the site to Spanish. Leave empty to reuse the English title.",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_ws_sector_badge_en",
+      "label": "Badge Text (English)",
+      "name": "sector_badge_en",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Small pill label at the top of the card, for example \"Prestige Brands\".",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_ws_sector_badge_es",
+      "label": "Badge Text (Spanish)",
+      "name": "sector_badge_es",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_ws_sector_description_en",
+      "label": "Description (English)",
+      "name": "sector_description_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Used on the categories page and for SEO context.",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_ws_sector_description_es",
+      "label": "Description (Spanish)",
+      "name": "sector_description_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_ws_sector_background_image",
+      "label": "Background Image",
+      "name": "sector_background_image",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "Full-bleed image behind the card. Landscape or square, at least 800px wide.",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all",
+      "min_width": 0,
+      "min_height": 0,
+      "min_size": 0,
+      "max_width": 0,
+      "max_height": 0,
+      "max_size": 0,
+      "mime_types": ""
+    },
+    {
+      "key": "field_ws_sector_link",
+      "label": "Card Link",
+      "name": "sector_link",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Where the card goes when clicked. A site path such as /contact, or a full https:// URL.",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "/contact",
+      "placeholder": "/contact",
+      "maxlength": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_ws_sector_show_on_homepage",
+      "label": "Show on Website",
+      "name": "sector_show_on_homepage",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "Turn off to keep the sector in WordPress without showing its card on the site.",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": 1,
+      "ui": 1,
+      "message": "",
+      "ui_on_text": "",
+      "ui_off_text": ""
+    },
+    {
+      "key": "field_ws_sector_message_order",
+      "label": "",
+      "name": "",
+      "aria-label": "",
+      "type": "message",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "To reorder the cards, set <strong>Order</strong> in the \"Page Attributes\" box - a lower number shows first.",
+      "new_lines": "wpautop",
+      "esc_html": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "product_sector"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "slug",
+    "author",
+    "format",
+    "categories",
+    "tags",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "Background image, names, badge, description and link for one Product Sector card.",
+  "show_in_rest": 1,
+  "display_title": "",
+  "allow_ai_access": false,
+  "ai_description": ""
+}

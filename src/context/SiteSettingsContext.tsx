@@ -1,7 +1,12 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { WpSiteSettings, defaultSiteSettings } from "@/lib/wp-settings";
+import {
+  WpSiteSettings,
+  defaultSiteSettings,
+  normalizeAboutContent,
+  normalizeProductSectors,
+} from "@/lib/wp-settings";
 
 const SUPPORT_PHONE =
   process.env.NEXT_PUBLIC_SUPPORT_PHONE_DISPLAY ||
@@ -47,7 +52,13 @@ export function SiteSettingsProvider({
     try {
       setIsLoading(true);
       const wpOrigin = (process.env.NEXT_PUBLIC_WP_BASE_URL || "").replace(/\/+$/, "");
-      const res = await fetch(`${wpOrigin}/wp-json/worldwide/v1/settings`);
+      // The host runs LiteSpeed in front of WordPress and will happily serve a
+      // cached REST response, so a fresh marker keeps edits from wp-admin
+      // showing up on the next page load instead of minutes later.
+      const res = await fetch(
+        `${wpOrigin}/wp-json/worldwide/v1/settings?t=${Date.now()}`,
+        { cache: "no-store" }
+      );
       if (res.ok) {
         const data = await res.json();
         setSettings((prev) => ({
@@ -110,6 +121,8 @@ export function SiteSettingsProvider({
             travel_sets: data.category_images?.travel_sets || prev.category_images.travel_sets,
             fashion: data.category_images?.fashion || prev.category_images.fashion,
           },
+          product_sectors: normalizeProductSectors(data.product_sectors, prev.product_sectors),
+          about_content: normalizeAboutContent(data.about_content, prev.about_content),
         }));
       }
     } catch (err) {

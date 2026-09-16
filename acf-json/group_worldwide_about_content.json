@@ -1,0 +1,941 @@
+{
+  "key": "group_worldwide_about_content",
+  "title": "Worldwide Supply 28 - About Page Content",
+  "fields": [
+    {
+      "key": "field_wa_tab_overview",
+      "label": "About - Overview",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_wa_overview_en",
+      "label": "Company Overview (English)",
+      "name": "about_overview_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 6,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_overview_es",
+      "label": "Company Overview (Spanish)",
+      "name": "about_overview_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 6,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_tab_story",
+      "label": "About - Our Story",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_wa_story_title_en",
+      "label": "Story Heading (English)",
+      "name": "about_story_title_en",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_story_title_es",
+      "label": "Story Heading (Spanish)",
+      "name": "about_story_title_es",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_story_intro_en",
+      "label": "Story Intro Paragraph (English)",
+      "name": "about_story_intro_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_story_intro_es",
+      "label": "Story Intro Paragraph (Spanish)",
+      "name": "about_story_intro_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 3,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_story_together_en",
+      "label": "How The Partnership Began (English)",
+      "name": "about_story_together_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 6,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_story_together_es",
+      "label": "How The Partnership Began (Spanish)",
+      "name": "about_story_together_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 6,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_story_family_en",
+      "label": "Family Spirit Paragraph (English)",
+      "name": "about_story_family_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 4,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_story_family_es",
+      "label": "Family Spirit Paragraph (Spanish)",
+      "name": "about_story_family_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 4,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_tab_mission",
+      "label": "About - Mission & Vision",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_wa_mission_title_en",
+      "label": "Mission Heading (English)",
+      "name": "about_mission_title_en",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_mission_title_es",
+      "label": "Mission Heading (Spanish)",
+      "name": "about_mission_title_es",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_mission_desc_en",
+      "label": "Mission Text (English)",
+      "name": "about_mission_desc_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 5,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_mission_desc_es",
+      "label": "Mission Text (Spanish)",
+      "name": "about_mission_desc_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 5,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_vision_title_en",
+      "label": "Vision Heading (English)",
+      "name": "about_vision_title_en",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_vision_title_es",
+      "label": "Vision Heading (Spanish)",
+      "name": "about_vision_title_es",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_vision_desc_en",
+      "label": "Vision Text (English)",
+      "name": "about_vision_desc_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 5,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_vision_desc_es",
+      "label": "Vision Text (Spanish)",
+      "name": "about_vision_desc_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 5,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_tab_values",
+      "label": "About - Core Values",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_wa_value_1_separator",
+      "label": "Core Value 1",
+      "name": "",
+      "aria-label": "",
+      "type": "separator",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_wa_value_1_title_en",
+      "label": "Value 1 Heading (English)",
+      "name": "about_value_1_title_en",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_value_1_title_es",
+      "label": "Value 1 Heading (Spanish)",
+      "name": "about_value_1_title_es",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_value_1_desc_en",
+      "label": "Value 1 Text (English)",
+      "name": "about_value_1_desc_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_value_1_desc_es",
+      "label": "Value 1 Text (Spanish)",
+      "name": "about_value_1_desc_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_value_2_separator",
+      "label": "Core Value 2",
+      "name": "",
+      "aria-label": "",
+      "type": "separator",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_wa_value_2_title_en",
+      "label": "Value 2 Heading (English)",
+      "name": "about_value_2_title_en",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_value_2_title_es",
+      "label": "Value 2 Heading (Spanish)",
+      "name": "about_value_2_title_es",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_value_2_desc_en",
+      "label": "Value 2 Text (English)",
+      "name": "about_value_2_desc_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_value_2_desc_es",
+      "label": "Value 2 Text (Spanish)",
+      "name": "about_value_2_desc_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_value_3_separator",
+      "label": "Core Value 3",
+      "name": "",
+      "aria-label": "",
+      "type": "separator",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_wa_value_3_title_en",
+      "label": "Value 3 Heading (English)",
+      "name": "about_value_3_title_en",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_value_3_title_es",
+      "label": "Value 3 Heading (Spanish)",
+      "name": "about_value_3_title_es",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_value_3_desc_en",
+      "label": "Value 3 Text (English)",
+      "name": "about_value_3_desc_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_value_3_desc_es",
+      "label": "Value 3 Text (Spanish)",
+      "name": "about_value_3_desc_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_value_4_separator",
+      "label": "Core Value 4",
+      "name": "",
+      "aria-label": "",
+      "type": "separator",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_wa_value_4_title_en",
+      "label": "Value 4 Heading (English)",
+      "name": "about_value_4_title_en",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_value_4_title_es",
+      "label": "Value 4 Heading (Spanish)",
+      "name": "about_value_4_title_es",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_value_4_desc_en",
+      "label": "Value 4 Text (English)",
+      "name": "about_value_4_desc_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_value_4_desc_es",
+      "label": "Value 4 Text (Spanish)",
+      "name": "about_value_4_desc_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_value_5_separator",
+      "label": "Core Value 5",
+      "name": "",
+      "aria-label": "",
+      "type": "separator",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_wa_value_5_title_en",
+      "label": "Value 5 Heading (English)",
+      "name": "about_value_5_title_en",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_value_5_title_es",
+      "label": "Value 5 Heading (Spanish)",
+      "name": "about_value_5_title_es",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_wa_value_5_desc_en",
+      "label": "Value 5 Text (English)",
+      "name": "about_value_5_desc_en",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_wa_value_5_desc_es",
+      "label": "Value 5 Text (Spanish)",
+      "name": "about_value_5_desc_es",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": false,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "rows": 2,
+      "default_value": "",
+      "new_lines": "",
+      "maxlength": "",
+      "placeholder": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page",
+        "operator": "==",
+        "value": "122"
+      }
+    ],
+    [
+      {
+        "param": "page_slug",
+        "operator": "==",
+        "value": "site-settings"
+      }
+    ]
+  ],
+  "menu_order": 1,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [],
+  "active": true,
+  "description": "Editable About Us copy: overview, company story, mission, vision and core values.",
+  "show_in_rest": 1,
+  "display_title": "",
+  "allow_ai_access": false,
+  "ai_description": ""
+}

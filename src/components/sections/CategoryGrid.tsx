@@ -3,11 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { siteData } from "@/data/siteData";
+import { useSiteSettings } from "@/context/SiteSettingsContext";
 import { ArrowUpRight } from "lucide-react";
 
 export function CategoryGrid({ compact = false }: { compact?: boolean }) {
   const { t } = useLanguage();
+  // Authored in WordPress under "Product Sectors" — image, names, badge, link
+  // and order all come from ACF, with the baked-in defaults as a safety net.
+  const { settings } = useSiteSettings();
+  const sectors = settings.product_sectors;
 
   return (
     <section className={`${compact ? "py-16" : "py-24"} bg-slate-50 text-[#071321] relative overflow-hidden`}>
@@ -42,10 +46,10 @@ export function CategoryGrid({ compact = false }: { compact?: boolean }) {
 
         {/* 8 Bright, Clean Category Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {siteData.categories.map((cat) => (
+          {sectors.map((cat) => (
             <Link
               key={cat.id}
-              href="/contact"
+              href={cat.link}
               className="group relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:border-[#00A884] flex flex-col justify-between h-[380px]"
             >
               {/* Full Bright Background Image - No Heavy Dark Shadows */}
@@ -63,9 +67,13 @@ export function CategoryGrid({ compact = false }: { compact?: boolean }) {
 
               {/* Badge Top Header */}
               <div className="relative z-10 p-5 flex justify-between items-start">
-                <span className="rounded-full bg-white/95 backdrop-blur-md px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#071321] shadow-sm border border-slate-200">
-                  {t(cat.badge.en, cat.badge.es)}
-                </span>
+                {t(cat.badge.en, cat.badge.es) ? (
+                  <span className="rounded-full bg-white/95 backdrop-blur-md px-3.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#071321] shadow-sm border border-slate-200">
+                    {t(cat.badge.en, cat.badge.es)}
+                  </span>
+                ) : (
+                  <span />
+                )}
                 <div className="h-9 w-9 rounded-full bg-white/95 backdrop-blur-md flex items-center justify-center text-[#071321] shadow-sm transition-all group-hover:bg-[#00A884] group-hover:text-white">
                   <ArrowUpRight className="h-4 w-4" />
                 </div>

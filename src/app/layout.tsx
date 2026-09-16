@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { ScrollProgress } from "@/components/animations/ScrollProgress";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { SiteSettingsProvider } from "@/context/SiteSettingsContext";
+import { getWpSiteSettings } from "@/lib/wp-settings";
 import { WhatsAppWidget } from "@/components/ui/WhatsAppWidget";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import { site } from "@/data/site";
@@ -46,11 +47,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Read the WordPress content at build time so the exported HTML already
+  // carries it (crawlers, first paint); the provider still refetches in the
+  // browser, which is what picks up edits made after the last deploy.
+  const initialSettings = await getWpSiteSettings();
+
   return (
     <html
       lang="en"
@@ -67,7 +73,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
         />
         <LanguageProvider>
-          <SiteSettingsProvider>
+          <SiteSettingsProvider initialSettings={initialSettings}>
             <ScrollProgress />
             <Header />
             <main>{children}</main>

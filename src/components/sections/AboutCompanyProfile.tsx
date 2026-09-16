@@ -1,10 +1,11 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
-import { siteData } from "@/data/siteData";
+import { useSiteSettings } from "@/context/SiteSettingsContext";
 import { Building2, FileText, Globe2, Handshake, ShieldCheck, Truck } from "lucide-react";
 
-const highlights = [
+// CIF comes from ACF, so the card is built per render rather than at module scope.
+const buildHighlights = (cif: string) => [
   {
     icon: Globe2,
     title: { en: "Global Reach", es: "Alcance Global" },
@@ -33,14 +34,18 @@ const highlights = [
     icon: ShieldCheck,
     title: { en: "Registered in Spain", es: "Registrada en Espana" },
     desc: {
-      en: `Spanish registered company with Tax ID (CIF): ${siteData.company.cif}. Registration certificate available upon request.`,
-      es: `Empresa registrada en Espana con Tax ID (CIF): ${siteData.company.cif}. Certificado de registro disponible bajo solicitud.`
+      en: `Spanish registered company with Tax ID (CIF): ${cif}. Registration certificate available upon request.`,
+      es: `Empresa registrada en Espana con Tax ID (CIF): ${cif}. Certificado de registro disponible bajo solicitud.`
     }
   }
 ];
 
 export function AboutCompanyProfile() {
   const { t } = useLanguage();
+  // Overview copy is authored in WordPress → Site Settings → "About - Overview".
+  const { settings } = useSiteSettings();
+  const { overview } = settings.about_content;
+  const highlights = buildHighlights(settings.company.cif);
 
   return (
     <section className="bg-white py-16 text-[#071321] sm:py-20">
@@ -56,7 +61,7 @@ export function AboutCompanyProfile() {
                 {t("About Worldwide Supply 28 SL", "Sobre Worldwide Supply 28 SL")}
               </h1>
               <p className="text-base leading-8 text-slate-600 sm:text-lg">
-                {t(siteData.about.overview.en, siteData.about.overview.es)}
+                {t(overview.en, overview.es)}
               </p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">

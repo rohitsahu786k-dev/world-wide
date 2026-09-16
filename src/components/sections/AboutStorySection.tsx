@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-import { siteData } from "@/data/siteData";
 import { Eye, MapPin, Sparkles, Target } from "lucide-react";
 import { getWpMedia } from "@/lib/wp-media";
 import { useSiteSettings } from "@/context/SiteSettingsContext";
@@ -10,6 +9,9 @@ import { useSiteSettings } from "@/context/SiteSettingsContext";
 export function AboutStorySection() {
   const { t } = useLanguage();
   const { settings } = useSiteSettings();
+  // Story, mission, vision and core values are authored in WordPress →
+  // Site Settings → the "About - ..." tabs.
+  const about = settings.about_content;
 
   const founders = [
     {
@@ -84,6 +86,16 @@ export function AboutStorySection() {
           ))}
         </div>
 
+        {/* Company story heading and lead-in */}
+        <div className="mx-auto mb-8 max-w-3xl text-center">
+          <h3 className="text-3xl font-semibold tracking-tight text-[#071321] sm:text-4xl">
+            {t(about.story.title.en, about.story.title.es)}
+          </h3>
+          <p className="mt-4 text-base text-slate-600 sm:text-lg">
+            {t(about.story.intro.en, about.story.intro.es)}
+          </p>
+        </div>
+
         {/* Shared Culture & Vision Card on Light Background */}
         <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 sm:p-12 mb-20 shadow-sm relative overflow-hidden">
           <div className="max-w-4xl space-y-4 relative z-10">
@@ -91,10 +103,10 @@ export function AboutStorySection() {
               {t("Shared Philosophy & Culture", "Filosofía y Cultura Compartida")}
             </span>
             <p className="text-base sm:text-xl font-semibold leading-relaxed text-[#071321]">
-              &quot;{t(siteData.about.story.together.en, siteData.about.story.together.es)}&quot;
+              &quot;{t(about.story.together.en, about.story.together.es)}&quot;
             </p>
             <p className="text-xs sm:text-sm font-bold text-[#00A884] pt-2">
-              {t(siteData.about.story.familySpirit.en, siteData.about.story.familySpirit.es)}
+              {t(about.story.family.en, about.story.family.es)}
             </p>
           </div>
         </div>
@@ -105,10 +117,10 @@ export function AboutStorySection() {
               <Target className="h-6 w-6" />
             </div>
             <h3 className="mt-5 text-2xl font-bold text-[#071321]">
-              {t(siteData.about.missionVision.mission.title.en, siteData.about.missionVision.mission.title.es)}
+              {t(about.mission.title.en, about.mission.title.es)}
             </h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              {t(siteData.about.missionVision.mission.desc.en, siteData.about.missionVision.mission.desc.es)}
+              {t(about.mission.desc.en, about.mission.desc.es)}
             </p>
           </div>
 
@@ -117,10 +129,10 @@ export function AboutStorySection() {
               <Eye className="h-6 w-6" />
             </div>
             <h3 className="mt-5 text-2xl font-bold text-[#071321]">
-              {t(siteData.about.missionVision.vision.title.en, siteData.about.missionVision.vision.title.es)}
+              {t(about.vision.title.en, about.vision.title.es)}
             </h3>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              {t(siteData.about.missionVision.vision.desc.en, siteData.about.missionVision.vision.desc.es)}
+              {t(about.vision.desc.en, about.vision.desc.es)}
             </p>
           </div>
         </div>
@@ -132,7 +144,7 @@ export function AboutStorySection() {
             </h3>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {siteData.about.coreValues.map((val, idx) => (
+            {about.core_values.map((val, idx) => (
               <div
                 key={val.title.en}
                 className="rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition hover:border-[#00A884] hover:shadow-md"

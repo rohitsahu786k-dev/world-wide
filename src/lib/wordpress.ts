@@ -1,6 +1,13 @@
 const WP_ORIGIN = (process.env.NEXT_PUBLIC_WP_BASE_URL || 'https://aquamarine-herring-353942.hostingersite.com').replace(/\/+$/, '');
 const WP_BASE = `${WP_ORIGIN}/wp-json/wp/v2`;
-const WP_AUTH = process.env.WP_BASIC_AUTH || 'Basic c3RoYWtrZXIzMkBnbWFpbC5jb206WEpCTSBZNklNIFRua3IgTDhNRiBLSDZWIFNVd3Q=';
+
+// Reading published posts needs no credentials. Authoring happens in wp-admin,
+// behind a WordPress login — this module never writes, so it never ships a
+// secret to the browser. WP_BASIC_AUTH stays optional, for build-time reads of
+// non-public content only.
+const authHeaders: Record<string, string> = process.env.WP_BASIC_AUTH
+  ? { Authorization: process.env.WP_BASIC_AUTH }
+  : {};
 
 export interface WordPressMedia {
   id: number;
@@ -104,7 +111,7 @@ export async function getPosts(params: {
 
   try {
     const res = await fetch(`${WP_BASE}/posts?${query.toString()}`, {
-      headers: { Authorization: WP_AUTH },
+      headers: authHeaders,
       next: { revalidate: 60 },
     });
 
@@ -127,7 +134,7 @@ export async function getPosts(params: {
 export async function getPost(id: number | string): Promise<BlogPostFormatted | null> {
   try {
     const res = await fetch(`${WP_BASE}/posts/${id}?_embed=1`, {
-      headers: { Authorization: WP_AUTH },
+      headers: authHeaders,
       next: { revalidate: 30 },
     });
 
@@ -138,90 +145,4 @@ export async function getPost(id: number | string): Promise<BlogPostFormatted | 
     console.error(`Failed to fetch post ${id}:`, err);
     return null;
   }
-}
-
-/**
- * Create a new post in WordPress.
- */
-export async function createPost(data: {
-  title: string;
-  content: string;
-  excerpt?: string;
-  status?: 'publish' | 'draft';
-  featured_media?: number;
-  categories?: number[];
-}): Promise<WordPressPost> {
-  const res = await fetch(`${WP_BASE}/posts`, {
-    method: 'POST',
-    headers: {
-      Authorization: WP_AUTH,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      title: data.title,
-      content: data.content,
-      excerpt: data.excerpt,
-      status: data.status || 'publish',
-      categories: data.categories || [2], // 2 = 'Blog' category in WordPress
-      ...(data.featured_media ? { featured_media: data.featured_media } : {}),
-    }),
-  });
-
-  if (!res.ok) {
-    const error = await res.text();
-    throw new Error(`Failed to create post (${res.status}): ${error}`);
-  }
-
-  return res.json();
-}
-
-/**
- * Update an existing post in WordPress.
- */
-export async function updatePost(
-  id: number | string,
-  data: {
-    title?: string;
-    content?: string;
-    excerpt?: string;
-    status?: 'publish' | 'draft';
-    featured_media?: number;
-    categories?: number[];
-  }
-): Promise<WordPressPost> {
-  const res = await fetch(`${WP_BASE}/posts/${id}`, {
-    method: 'POST',
-    headers: {
-      Authorization: WP_AUTH,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      ...data,
-      categories: data.categories || [2], // Retain 'Blog' category
-    }),
-  });
-
-  if (!res.ok) {
-    const error = await res.text();
-    throw new Error(`Failed to update post ${id} (${res.status}): ${error}`);
-  }
-
-  return res.json();
-}
-
-/**
- * Delete a post from WordPress.
- */
-export async function deletePost(id: number | string, force = true): Promise<boolean> {
-  const res = await fetch(`${WP_BASE}/posts/${id}?force=${force}`, {
-    method: 'DELETE',
-    headers: { Authorization: WP_AUTH },
-  });
-
-  if (!res.ok) {
-    const error = await res.text();
-    throw new Error(`Failed to delete post ${id} (${res.status}): ${error}`);
-  }
-
-  return true;
 }

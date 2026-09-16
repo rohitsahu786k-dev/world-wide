@@ -1,4 +1,5 @@
 import { getWpMedia } from "./wp-media";
+import { siteData } from "@/data/siteData";
 
 // The primary env vars carry the WhatsApp line, the secondary ones the mobile
 // line — the names predate that split. `phone` is the mobile line, so it reads
@@ -34,6 +35,40 @@ const HERO_MOBILE_BANNERS = [
   "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-luxury-products-banner-mobile-01.png",
   "/banner-img/worldwide-supply-28-sl/mobile/worldwide-supply-28-sl-wholesale-lifestyle-banner-mobile-03.png",
 ];
+
+/** Every visitor-facing string exists in both site languages. */
+export interface BilingualText {
+  en: string;
+  es: string;
+}
+
+/**
+ * One "Product Sectors" card. Authored in WordPress as a `product_sector` post
+ * (ACF: background image, Spanish name, badge, description, link, order).
+ */
+export interface ProductSector {
+  id: string;
+  name: BilingualText;
+  badge: BilingualText;
+  description: BilingualText;
+  image: string;
+  link: string;
+  order: number;
+}
+
+/** About Us copy, authored on the WordPress "Site Settings" page. */
+export interface AboutContent {
+  overview: BilingualText;
+  story: {
+    title: BilingualText;
+    intro: BilingualText;
+    together: BilingualText;
+    family: BilingualText;
+  };
+  mission: { title: BilingualText; desc: BilingualText };
+  vision: { title: BilingualText; desc: BilingualText };
+  core_values: Array<{ title: BilingualText; desc: BilingualText }>;
+}
 
 export interface WpSiteSettings {
   company: {
@@ -95,6 +130,8 @@ export interface WpSiteSettings {
     travel_sets: string;
     fashion: string;
   };
+  product_sectors: ProductSector[];
+  about_content: AboutContent;
 }
 
 export const defaultSiteSettings: WpSiteSettings = {
@@ -157,9 +194,115 @@ export const defaultSiteSettings: WpSiteSettings = {
     travel_sets: getWpMedia("/images/categories/travel-sets-airport-kit.png"),
     fashion: getWpMedia("/images/categories/fashion-textiles.jpg"),
   },
+  // Fallbacks only — the live cards come from the WordPress `product_sector`
+  // post type, so an editor can add, reorder or retire one without a deploy.
+  product_sectors: siteData.categories.map((category, index) => ({
+    id: category.id,
+    name: category.name,
+    badge: category.badge,
+    description: category.description,
+    image: category.image,
+    link: "/contact",
+    order: (index + 1) * 10,
+  })),
+  about_content: {
+    overview: siteData.about.overview,
+    story: {
+      title: siteData.about.story.title,
+      intro: siteData.about.story.p1,
+      together: siteData.about.story.together,
+      family: siteData.about.story.familySpirit,
+    },
+    mission: {
+      title: siteData.about.missionVision.mission.title,
+      desc: siteData.about.missionVision.mission.desc,
+    },
+    vision: {
+      title: siteData.about.missionVision.vision.title,
+      desc: siteData.about.missionVision.vision.desc,
+    },
+    core_values: siteData.about.coreValues.map((value) => ({
+      title: value.title,
+      desc: value.desc,
+    })),
+  },
 };
 
 const WP_SETTINGS_API = `${(process.env.NEXT_PUBLIC_WP_BASE_URL || "").replace(/\/+$/, "")}/wp-json/worldwide/v1/settings`;
+
+type Loose = Record<string, any>;
+
+/**
+ * A bilingual pair from WordPress, with the Spanish side falling back to the
+ * English one so a half-translated field never renders empty.
+ */
+function bilingual(value: Loose | undefined, fallback: BilingualText): BilingualText {
+  const en = value?.en || fallback.en;
+  return { en, es: value?.es || fallback.es || en };
+}
+
+/**
+ * Normalises the `product_sectors` payload. Sectors without an image or a name
+ * are dropped; if nothing usable survives we keep the baked-in defaults rather
+ * than render an empty grid.
+ */
+export function normalizeProductSectors(
+  raw: unknown,
+  fallback: ProductSector[] = defaultSiteSettings.product_sectors
+): ProductSector[] {
+  if (!Array.isArray(raw)) return fallback;
+
+  const sectors = raw
+    .filter((sector: Loose) => sector?.image && (sector?.name?.en || sector?.name?.es))
+    .map((sector: Loose, index: number) => ({
+      id: String(sector.id || `sector-${index}`),
+      name: bilingual(sector.name, { en: "", es: "" }),
+      badge: bilingual(sector.badge, { en: "", es: "" }),
+      description: bilingual(sector.description, { en: "", es: "" }),
+      image: String(sector.image),
+      link: sector.link || "/contact",
+      order: Number(sector.order ?? (index + 1) * 10),
+    }))
+    .sort((a, b) => a.order - b.order);
+
+  return sectors.length > 0 ? sectors : fallback;
+}
+
+/** Normalises the `about_content` payload, field by field, against defaults. */
+export function normalizeAboutContent(
+  raw: unknown,
+  fallback: AboutContent = defaultSiteSettings.about_content
+): AboutContent {
+  const data = (raw || {}) as Loose;
+
+  const values = Array.isArray(data.core_values)
+    ? data.core_values
+        .filter((value: Loose) => value?.title?.en || value?.title?.es)
+        .map((value: Loose) => ({
+          title: bilingual(value.title, { en: "", es: "" }),
+          desc: bilingual(value.desc, { en: "", es: "" }),
+        }))
+    : [];
+
+  return {
+    overview: bilingual(data.overview, fallback.overview),
+    story: {
+      title: bilingual(data.story?.title, fallback.story.title),
+      intro: bilingual(data.story?.intro, fallback.story.intro),
+      together: bilingual(data.story?.together, fallback.story.together),
+      family: bilingual(data.story?.family, fallback.story.family),
+    },
+    mission: {
+      title: bilingual(data.mission?.title, fallback.mission.title),
+      desc: bilingual(data.mission?.desc, fallback.mission.desc),
+    },
+    vision: {
+      title: bilingual(data.vision?.title, fallback.vision.title),
+      desc: bilingual(data.vision?.desc, fallback.vision.desc),
+    },
+    core_values: values.length > 0 ? values : fallback.core_values,
+  };
+}
 
 /**
  * Fetch dynamic ACF site settings from WordPress with robust fallback
@@ -235,6 +378,8 @@ export async function getWpSiteSettings(): Promise<WpSiteSettings> {
         travel_sets: data.category_images?.travel_sets || defaultSiteSettings.category_images.travel_sets,
         fashion: data.category_images?.fashion || defaultSiteSettings.category_images.fashion,
       },
+      product_sectors: normalizeProductSectors(data.product_sectors),
+      about_content: normalizeAboutContent(data.about_content),
     };
   } catch {
     return defaultSiteSettings;

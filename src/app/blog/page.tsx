@@ -21,7 +21,7 @@ export default async function BlogPage() {
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#207B68_1px,transparent_1px)] [background-size:24px_24px]" />
         
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="flex flex-col gap-6">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-[#207B68]/40 bg-[#207B68]/15 px-3.5 py-1 text-xs font-semibold tracking-wider uppercase text-[#5ce0c3]">
                 <Sparkles className="size-3.5" />
@@ -34,16 +34,6 @@ export default async function BlogPage() {
                 Strategic perspective on luxury perfumery, travel retail logistics, bonded trade corridors, and commercial wholesale distribution from our European headquarters in Valencia.
               </p>
             </div>
-
-            <div className="flex items-center gap-3">
-              <Link
-                href="/blog/manage"
-                className="inline-flex items-center gap-2 rounded-xl border border-[#207B68] bg-[#207B68] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#207B68]/20 transition-all duration-300 hover:bg-[#1a6656] hover:shadow-xl"
-              >
-                Manage Articles (CRUD)
-                <ArrowRight className="size-4" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -54,14 +44,8 @@ export default async function BlogPage() {
           <div className="rounded-2xl border border-[#123A5A]/10 bg-white p-12 text-center shadow-sm">
             <h3 className="text-xl font-semibold text-[#123A5A]">No published insights found</h3>
             <p className="mt-2 text-sm text-[#102033]/70">
-              Articles will appear here once published from WordPress or the management dashboard.
+              Articles appear here once they are published from WordPress.
             </p>
-            <Link
-              href="/blog/manage"
-              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#207B68] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1a6656]"
-            >
-              Create First Article
-            </Link>
           </div>
         ) : (
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
