@@ -5,7 +5,6 @@ import { useLanguage } from "@/context/LanguageContext";
 import { siteData } from "@/data/siteData";
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
 import { useSiteSettings } from "@/context/SiteSettingsContext";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function ContactInquirySection({ compact = false }: { compact?: boolean }) {
   const { t } = useLanguage();
@@ -77,13 +76,11 @@ export function ContactInquirySection({ compact = false }: { compact?: boolean }
                   <Phone className="h-5 w-5 text-[#00A884] shrink-0 mt-0.5" />
                   <div>
                     <span className="font-bold text-white block mb-1">{t("Whatsapp & Mobile (24/7)", "Whatsapp y Móvil (24/7)")}</span>
-                    <a href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm hover:text-[#00A884]">
-                      <WhatsAppIcon className="h-4 w-4 text-[#25D366] shrink-0" />
+                    <a href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="block text-sm hover:text-[#00A884]">
                       <span>{whatsappNumber}</span>
                     </a>
                     {mobileNumber && (
-                      <a href={`tel:${mobileNumber.replace(/[^0-9+]/g, "")}`} className="mt-1.5 flex items-center gap-2 text-sm hover:text-[#00A884]">
-                        <Phone className="h-4 w-4 text-[#00A884] shrink-0" />
+                      <a href={`tel:${mobileNumber.replace(/[^0-9+]/g, "")}`} className="mt-1.5 block text-sm hover:text-[#00A884]">
                         <span>{mobileNumber}</span>
                       </a>
                     )}
