@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build --webpack",
     "start": "next start",
+    "deploy:hostinger": "node scripts/deploy-to-hostinger.mjs",
     "lint": "eslint",
     "type-check": "tsc --noEmit"
   },
