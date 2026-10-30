@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ScrollProgress } from "@/components/animations/ScrollProgress";
+import { ScrollRestoration } from "@/components/animations/ScrollRestoration";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { SiteSettingsProvider } from "@/context/SiteSettingsContext";
 import { getWpSiteSettings } from "@/lib/wp-settings";
@@ -75,6 +76,7 @@ export default async function RootLayout({
         <LanguageProvider>
           <SiteSettingsProvider initialSettings={initialSettings}>
             <ScrollProgress />
+            <ScrollRestoration />
             <Header />
             <main>{children}</main>
             <Footer />

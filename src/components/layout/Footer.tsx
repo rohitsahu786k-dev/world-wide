@@ -7,7 +7,6 @@ import { siteData } from "@/data/siteData";
 import { MapPin, Phone, Mail, Clock, ArrowUp } from "lucide-react";
 import { getWpMedia } from "@/lib/wp-media";
 import { useSiteSettings } from "@/context/SiteSettingsContext";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -81,7 +80,7 @@ export function Footer() {
               {t("Luxury Categories", "Categorías de Lujo")}
             </h3>
             <ul className="space-y-3 text-xs font-semibold text-slate-700">
-              {siteData.categories.slice(0, 6).map((cat) => (
+              {settings.product_sectors.map((cat) => (
                 <li key={cat.id}>
                   <Link href="/categories" className="hover:text-[#00A884] transition">
                     {t(cat.name.en, cat.name.es)}
@@ -103,12 +102,12 @@ export function Footer() {
               </li>
               <li>
                 <a href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-[#00A884]">
-                  <WhatsAppIcon className="h-4 w-4 text-[#25D366] shrink-0" />
+                  <Phone className="h-4 w-4 text-[#00A884] shrink-0" />
                   <span>{whatsappNumber}</span>
                 </a>
                 {mobileNumber && (
                   <a href={`tel:${mobileNumber.replace(/[^0-9+]/g, "")}`} className="mt-2 flex items-center gap-3 hover:text-[#00A884]">
-                    <Phone className="h-4 w-4 text-[#00A884] shrink-0" />
+                    <span className="h-4 w-4 shrink-0" aria-hidden="true" />
                     <span>{mobileNumber}</span>
                   </a>
                 )}
